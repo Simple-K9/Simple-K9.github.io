@@ -1,0 +1,2629 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="simplek9"><meta name="copyright" content="simplek9"><meta name="generator" content="Hexo 5.4.0"><meta name="theme" content="hexo-theme-yun"><title>蓝桥杯习题集 | simplek9 の blog</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.24/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_j5gk85dg4pf.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>document.addEventListener("DOMContentLoaded", () => {
+  [".post-card",".post-content img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+});
+</script><link rel="icon" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"生命其实到最后总能成诗","version":"1.6.1","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://el-bot-api.vercel.app/api/words/young"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=UA-121354150-1"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-121354150-1');
+}</script><script data-ad-client="ca-pub-2245427233262012" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="刷题[toc] 7-1 买U盘 (10分)IT 协会举办程序设计竞赛，准备购买 U 盘作奖品。请编写程序，根据活动经费和 U 盘单价预估可购买 U 盘的最大数量。 输入格式活动经费和 U 盘单价 输出格式可购买 U 盘的最大数量  输入样例1807.5 47.5输出样例117   输入样例2504.9 19.8输出样例225  #include&lt;bits&#x2F;stdc++.h&gt; using">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥杯习题集">
+<meta property="og:url" content="http://example.com/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/index.html">
+<meta property="og:site_name" content="simplek9 の blog">
+<meta property="og:description" content="刷题[toc] 7-1 买U盘 (10分)IT 协会举办程序设计竞赛，准备购买 U 盘作奖品。请编写程序，根据活动经费和 U 盘单价预估可购买 U 盘的最大数量。 输入格式活动经费和 U 盘单价 输出格式可购买 U 盘的最大数量  输入样例1807.5 47.5输出样例117   输入样例2504.9 19.8输出样例225  #include&lt;bits&#x2F;stdc++.h&gt; using">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://images.ptausercontent.com/187">
+<meta property="og:image" content="https://images.ptausercontent.com/356">
+<meta property="article:published_time" content="2021-05-22T04:26:23.120Z">
+<meta property="article:modified_time" content="2021-05-22T04:31:23.673Z">
+<meta property="article:author" content="simplek9">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.ptausercontent.com/187"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="simplek9"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="simplek9"><span class="site-author-status" title="Looking for dawn.">🌑</span></a><div class="site-author-name"><a href="/about/">simplek9</a></div><span class="site-name">simplek9 の blog</span><sub class="site-subtitle">Never ever give up</sub><div class="site-desciption">谁终将声震人间，必长久深自缄默；谁终将点燃闪电，必将长久如云漂泊。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">2</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">0</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">0</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=epvxdq1sknJe9JMj6J1LsBw4a6cI_2ln&amp;jump_from=webapi" title="QQ" target="_blank" style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/YunYouJun" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://weibo.com/jizhideyunyoujun" title="微博" target="_blank" style="color:#E6162D"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibo-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.douban.com/people/yunyoujun/" title="豆瓣" target="_blank" style="color:#007722"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douban-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=247102977" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/yunyoujun/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/1579790" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/YunYouJun" title="Twitter" target="_blank" style="color:#1da1f2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://t.me/elpsycn" title="Telegram Channel" target="_blank" style="color:#0088CC"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-telegram-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:me@yunyoujun.cn" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://travellings.now.sh/" title="Travelling" target="_blank" style="color:var(--hty-text-color)"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-send-plane-2-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/girls/" title="喜欢的女孩子" style="color:hotpink"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-women-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%B7%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">刷题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E4%B9%B0U%E7%9B%98-10%E5%88%86"><span class="toc-number">1.0.1.</span> <span class="toc-text">7-1 买U盘 (10分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%87%BA%E7%A7%9F%E8%BD%A6%E8%AE%A1%E4%BB%B7-15%E5%88%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">7-2 出租车计价 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E8%AE%A1%E7%AE%97%E5%A4%A9%E6%95%B0-15%E5%88%86"><span class="toc-number">1.0.3.</span> <span class="toc-text">7-3 计算天数 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%E9%BE%9F%E5%85%94%E8%B5%9B%E8%B7%91-20%E5%88%86"><span class="toc-number">1.0.4.</span> <span class="toc-text">7-4 龟兔赛跑 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%E5%A5%87%E5%81%B6%E5%88%86%E5%AE%B6-10%E5%88%86"><span class="toc-number">1.0.5.</span> <span class="toc-text">7-5 奇偶分家 (10分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%E6%98%AF%E4%B8%8D%E6%98%AF%E5%A4%AA%E8%83%96%E4%BA%86-5%E5%88%86"><span class="toc-number">1.0.6.</span> <span class="toc-text">7-6 是不是太胖了 (5分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%A4%AA%E8%83%96%E4%BA%86-10%E5%88%86"><span class="toc-number">1.0.7.</span> <span class="toc-text">7-7 到底是不是太胖了 (10分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-%E5%BE%B7%E6%89%8D%E8%AE%BA-25%E5%88%86"><span class="toc-number">1.0.8.</span> <span class="toc-text">7-8 德才论 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-9-%E8%BE%93%E5%87%BA%E4%B8%89%E8%A7%92%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%92%8C%E5%91%A8%E9%95%BF-15%E5%88%86"><span class="toc-number">1.0.9.</span> <span class="toc-text">7-9 输出三角形面积和周长 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-11-%E8%B7%9F%E5%A5%A5%E5%B7%B4%E9%A9%AC%E4%B8%80%E8%B5%B7%E7%94%BB%E6%96%B9%E5%9D%97-15%E5%88%86"><span class="toc-number">1.0.10.</span> <span class="toc-text">7-11 跟奥巴马一起画方块 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-15-%E6%B1%82%E4%B8%80%E6%89%B9%E6%95%B4%E6%95%B0%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E4%B8%AA%E4%BD%8D%E6%95%B0%E5%AD%97-20%E5%88%86"><span class="toc-number">1.0.11.</span> <span class="toc-text">7-15 求一批整数中出现最多的个位数字 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-16-%E9%AA%8C%E8%AF%81%E2%80%9C%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3%E2%80%9D-20%E5%88%86"><span class="toc-number">1.0.12.</span> <span class="toc-text">7-16 验证“哥德巴赫猜想” (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-21-%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8-25%E5%88%86"><span class="toc-number">1.0.13.</span> <span class="toc-text">7-21 重排链表 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-55-%E6%9C%80%E9%95%BF%E5%AF%B9%E7%A7%B0%E5%AD%90%E4%B8%B2-25%E5%88%86"><span class="toc-number">1.0.14.</span> <span class="toc-text">7-55 最长对称子串 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-60-%E6%83%85%E4%BA%BA%E8%8A%82-15%E5%88%86"><span class="toc-number">1.0.15.</span> <span class="toc-text">7-60 情人节 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-66-%E5%B8%85%E5%88%B0%E6%B2%A1%E6%9C%8B%E5%8F%8B-20%E5%88%86"><span class="toc-number">1.0.16.</span> <span class="toc-text">7-66 帅到没朋友 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-67-%E4%B8%80%E5%B8%AE%E4%B8%80-15%E5%88%86"><span class="toc-number">1.0.17.</span> <span class="toc-text">7-67 一帮一 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-68-%E6%B5%B7%E7%9B%97%E5%88%86%E8%B5%83-25%E5%88%86"><span class="toc-number">1.0.18.</span> <span class="toc-text">7-68 海盗分赃 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-70-%E7%BB%9F%E8%AE%A1%E5%B7%A5%E9%BE%84-20%E5%88%86"><span class="toc-number">1.0.19.</span> <span class="toc-text">7-70 统计工龄 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-71-%E6%9C%8B%E5%8F%8B%E5%9C%88-25%E5%88%86"><span class="toc-number">1.0.20.</span> <span class="toc-text">7-71 朋友圈 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-72-%E6%A8%A1%E6%8B%9FEXCEL%E6%8E%92%E5%BA%8F-25%E5%88%86"><span class="toc-number">1.0.21.</span> <span class="toc-text">7-72 模拟EXCEL排序 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-74-%E6%8A%A2%E7%BA%A2%E5%8C%85-25%E5%88%86"><span class="toc-number">1.0.22.</span> <span class="toc-text">7-74 抢红包 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-75-%E9%98%85%E8%A7%88%E5%AE%A4-20%E5%88%86"><span class="toc-number">1.0.23.</span> <span class="toc-text">7-75 阅览室 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-77-%E6%95%B2%E7%AC%A8%E9%92%9F-20%E5%88%86"><span class="toc-number">1.0.24.</span> <span class="toc-text">7-77 敲笨钟 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-78-%E4%BC%B0%E5%80%BC%E4%B8%80%E4%BA%BF%E7%9A%84AI%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81-20%E5%88%86"><span class="toc-number">1.0.25.</span> <span class="toc-text">7-78 估值一亿的AI核心代码 (20分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-79-%E7%89%B9%E7%AB%8B%E7%8B%AC%E8%A1%8C%E7%9A%84%E5%B9%B8%E7%A6%8F-25%E5%88%86"><span class="toc-number">1.0.26.</span> <span class="toc-text">7-79 特立独行的幸福 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-80-Wifi%E5%AF%86%E7%A0%81-15%E5%88%86"><span class="toc-number">1.0.27.</span> <span class="toc-text">7-80 Wifi密码 (15分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-81-%E6%9C%88%E9%A5%BC-25%E5%88%86"><span class="toc-number">1.0.28.</span> <span class="toc-text">7-81 月饼 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-82-%E6%B7%B1%E5%85%A5%E8%99%8E%E7%A9%B4-25%E5%88%86"><span class="toc-number">1.0.29.</span> <span class="toc-text">7-82 深入虎穴 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-83-%E5%AE%B6%E5%BA%AD%E6%88%BF%E4%BA%A7-25%E5%88%86"><span class="toc-number">1.0.30.</span> <span class="toc-text">7-83 家庭房产 (25分)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-84-%E6%B1%82%E5%88%86%E6%95%B0%E5%BA%8F%E5%88%97%E5%89%8DN%E9%A1%B9%E5%92%8C-15%E5%88%86"><span class="toc-number">1.0.31.</span> <span class="toc-text">7-84 求分数序列前N项和 (15分)</span></a></li></ol></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://example.com/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="simplek9"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="simplek9 の blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">蓝桥杯习题集<a class="post-edit-link" href="https://github.com/YunYouJun/yunyoujun.github.io/tree/hexo/source/_posts/蓝桥习题集.md" target="_blank" title="Edit this post" rel="noopener"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-edit-line"></use></svg></a></h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="Created: 2021-05-22 12:26:23" itemprop="dateCreated datePublished" datetime="2021-05-22T12:26:23+08:00">2021-05-22</time></div><span class="leancloud_visitors" id="/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/" data-flag-title="蓝桥杯习题集"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="Comments"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-chat-3-line"></use></svg> <span class="waline-comment-count" id="/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/"></span></span></a><div class="post-classify"></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><h1 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h1><p>[toc]</p>
+<h3 id="7-1-买U盘-10分"><a href="#7-1-买U盘-10分" class="headerlink" title="7-1 买U盘 (10分)"></a>7-1 买U盘 (10分)</h3><p>IT 协会举办程序设计竞赛，准备购买 U 盘作奖品。请编写程序，根据活动经费和 U 盘单价预估可购买 U 盘的最大数量。</p>
+<p>输入格式<br>活动经费和 U 盘单价</p>
+<p>输出格式<br>可购买 U 盘的最大数量</p>
+<blockquote>
+<p>输入样例1<br>807.5 47.5<br>输出样例1<br>17</p>
+</blockquote>
+<blockquote>
+<p>输入样例2<br>504.9 19.8<br>输出样例2<br>25</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+double a,b;
+cin&gt;&gt;a&gt;&gt;b;
+cout&lt;&lt;fixed&lt;&lt;setprecision(0)&lt;&lt;a/b-0.00001;
+return 0;
+&#125;
+</code></pre>
+<p>###7-76 买U盘(误差修正版) (10分)<br>IT 协会举办程序设计竞赛，准备购买 U 盘作奖品。请编写程序，根据活动经费和 U 盘单价预估可购买 U 盘的最大数量。</p>
+<p>输入格式<br>活动经费和 U 盘单价</p>
+<p>输出格式<br>可购买 U 盘的最大数量</p>
+<blockquote>
+<p>输入样例<br>660.8 47.2<br>输出样例<br>14<br>输入样例2<br>504.9 19.8<br>输出样例2<br>25<br>要求：考虑实数的误差。</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+double a,b;
+cin&gt;&gt;a&gt;&gt;b;
+cout&lt;&lt;fixed&lt;&lt;setprecision(0)&lt;&lt;(a/b+0.5);
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-2-出租车计价-15分"><a href="#7-2-出租车计价-15分" class="headerlink" title="7-2 出租车计价 (15分)"></a>7-2 出租车计价 (15分)</h3><p>本题要求根据某城市普通出租车收费标准编写程序进行车费计算。具体标准如下：</p>
+<p>起步里程为3公里，起步费10元；<br>超起步里程后10公里内，每公里2元；<br>超过10公里以上的部分加收50%的回空补贴费，即每公里3元；<br>营运过程中，因路阻及乘客要求临时停车的，按每5分钟2元计收（不足5分钟则不收费）。<br>输入格式:<br>输入在一行中给出输入行驶里程（单位为公里，精确到小数点后1位）与等待时间（整数，单位为分钟），其间以空格分隔。</p>
+<p>输出格式:<br>在一行中输出乘客应支付的车费（单位为元），结果四舍五入，保留到元。</p>
+<blockquote>
+<p>输入样例1:<br>2.6 2<br>输出样例1:<br>10<br>输入样例2:<br>5.1 4<br>输出样例2:<br>14<br>输入样例3:<br>12.5 9<br>输出样例3:<br>34</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int t;
+double s,y;
+cin&gt;&gt;s&gt;&gt;t;
+if(s&lt;=3)y=10;
+else if(s&gt;3&amp;&amp;s&lt;=10)y=10+2.0*(s-3);
+else y=10+14+3*(s-10);
+if(t)y+=t/5*2;
+cout&lt;&lt;fixed&lt;&lt;setprecision(0)&lt;&lt;y;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-3-计算天数-15分"><a href="#7-3-计算天数-15分" class="headerlink" title="7-3 计算天数 (15分)"></a>7-3 计算天数 (15分)</h3><p>本题要求编写程序计算某年某月某日是该年中的第几天。</p>
+<p>输入格式:<br>输入在一行中按照格式“yyyy/mm/dd”（即“年/月/日”）给出日期。注意：闰年的判别条件是该年年份能被4整除但不能被100整除、或者能被400整除。闰年的2月有29天。</p>
+<p>输出格式:<br>在一行输出日期是该年中的第几天。</p>
+<blockquote>
+<p>输入样例1:<br>2009/03/02<br>输出样例1:<br>61<br>输入样例2:<br>2000/03/02<br>输出样例2:<br>62<br>鸣谢湖北汽车工业学院袁科老师补充数据</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+int m1[12]=&#123;31,28,31,30,31,30,31,31,30,31,30,31&#125;;
+using namespace std;
+int main()
+&#123;
+int y,m,d;
+char a,b;
+cin&gt;&gt;y&gt;&gt;a&gt;&gt;m&gt;&gt;b&gt;&gt;d;
+if((y%4==0&amp;&amp;y%100!=0)||(y%400==0))
+m1[1]=29; 
+int day=0;
+for(int i=0;i&lt;m-1;i++)&#123;
+    day+=m1[i];
+&#125;
+day+=d;
+cout&lt;&lt;day;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-4-龟兔赛跑-20分"><a href="#7-4-龟兔赛跑-20分" class="headerlink" title="7-4 龟兔赛跑 (20分)"></a>7-4 龟兔赛跑 (20分)</h3><p>乌龟与兔子进行赛跑，跑场是一个矩型跑道，跑道边可以随地进行休息。乌龟每分钟可以前进3米，兔子每分钟前进9米；兔子嫌乌龟跑得慢，觉得肯定能跑赢乌龟，于是，每跑10分钟回头看一下乌龟，若发现自己超过乌龟，就在路边休息，每次休息30分钟，否则继续跑10分钟；而乌龟非常努力，一直跑，不休息。假定乌龟与兔子在同一起点同一时刻开始起跑，请问T分钟后乌龟和兔子谁跑得快？</p>
+<p>输入格式：<br>输入在一行中给出比赛时间T（分钟）。</p>
+<p>输出格式：<br>在一行中输出比赛的结果：乌龟赢输出@<em>@，兔子赢输出^_^，平局则输出-</em>-；后跟1空格，再输出胜利者跑完的距离。</p>
+<blockquote>
+<p>输入样例：<br>242<br>输出样例：<br>@_@ 726</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int t,gui=0,rab=0,flag=1,cn=0;
+cin&gt;&gt;t;
+for(int i=1;i&lt;=t;i++)&#123;
+    gui+=3;
+    if(flag==1)&#123;
+        rab+=9;
+        if(i%10==0&amp;&amp;rab&gt;gui)flag=0;&#125;
+    else&#123;
+        cn++;
+        if(cn==30)&#123;flag=1;cn=0;&#125;&#125;
+&#125;
+if(gui&gt;rab)cout&lt;&lt;&quot;@_@ &quot;&lt;&lt;gui;
+else if(gui&lt;rab)cout&lt;&lt;&quot;^_^ &quot;&lt;&lt;rab;
+else cout&lt;&lt;&quot;-_- &quot;&lt;&lt;rab;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-5-奇偶分家-10分"><a href="#7-5-奇偶分家-10分" class="headerlink" title="7-5 奇偶分家 (10分)"></a>7-5 奇偶分家 (10分)</h3><p>给定N个正整数，请统计奇数和偶数各有多少个？</p>
+<p>输入格式：<br>输入第一行给出一个正整N（≤1000）；第2行给出N个非负整数，以空格分隔。</p>
+<p>输出格式：<br>在一行中先后输出奇数的个数、偶数的个数。中间以1个空格分隔。</p>
+<blockquote>
+<p>输入样例：<br>9<br>88 74 101 26 15 0 34 22 77<br>输出样例：<br>3 6</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n,a,cn1=0,cn2=0;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a;
+    if(a%2)cn1++;
+    if(a%2==0)cn2++;
+&#125;
+cout&lt;&lt;cn1&lt;&lt;&quot; &quot;&lt;&lt;cn2;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-6-是不是太胖了-5分"><a href="#7-6-是不是太胖了-5分" class="headerlink" title="7-6 是不是太胖了 (5分)"></a>7-6 是不是太胖了 (5分)</h3><p>据说一个人的标准体重应该是其身高（单位：厘米）减去100、再乘以0.9所得到的公斤数。已知市斤的数值是公斤数值的两倍。现给定某人身高，请你计算其标准体重应该是多少？（顺便也悄悄给自己算一下吧……）</p>
+<p>输入格式：<br>输入第一行给出一个正整数H（100 &lt; H ≤ 300），为某人身高。</p>
+<p>输出格式：<br>在一行中输出对应的标准体重，单位为市斤，保留小数点后1位。</p>
+<blockquote>
+<p>输入样例：<br>169<br>输出样例：<br>124.2</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int h;
+cin&gt;&gt;h;
+double w;
+w=(h-100)*0.9*2;
+cout&lt;&lt;fixed&lt;&lt;setprecision(1)&lt;&lt;w;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-7-到底是不是太胖了-10分"><a href="#7-7-到底是不是太胖了-10分" class="headerlink" title="7-7 到底是不是太胖了 (10分)"></a>7-7 到底是不是太胖了 (10分)</h3><p>据说一个人的标准体重应该是其身高（单位：厘米）减去100、再乘以0.9所得到的公斤数。真实体重与标准体重误差在10%以内都是完美身材（即 | 真实体重 − 标准体重 | &lt; 标准体重×10%）。已知市斤是公斤的两倍。现给定一群人的身高和实际体重，请你告诉他们是否太胖或太瘦了。</p>
+<p>输入格式：<br>输入第一行给出一个正整数N（≤ 20）。随后N行，每行给出两个整数，分别是一个人的身高H（120 &lt; H &lt; 200；单位：厘米）和真实体重W（50 &lt; W ≤ 300；单位：市斤），其间以空格分隔。</p>
+<p>输出格式：<br>为每个人输出一行结论：如果是完美身材，输出You are wan mei!；如果太胖了，输出You are tai pang le!；否则输出You are tai shou le!。</p>
+<blockquote>
+<p>输入样例：<br>3<br>169 136<br>150 81<br>178 155<br>输出样例：<br>You are wan mei!<br>You are tai shou le!<br>You are tai pang le!</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n,h,w3;
+    cin&gt;&gt;n;
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;h&gt;&gt;w3;
+        double w=w3;
+        w/=2.0; 
+        double w2;
+        w2=(h-100)*0.9;
+            if(fabs(w2-w)&lt;w2*0.1)cout&lt;&lt;&quot;You are wan mei!&quot;&lt;&lt;endl;
+            else&#123;
+            if(w2&lt;w)cout&lt;&lt;&quot;You are tai pang le!&quot;&lt;&lt;endl;
+            else cout&lt;&lt;&quot;You are tai shou le!&quot;&lt;&lt;endl;&#125;
+    &#125;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-8-德才论-25分"><a href="#7-8-德才论-25分" class="headerlink" title="7-8 德才论 (25分)"></a>7-8 德才论 (25分)</h3><p>宋代史学家司马光在《资治通鉴》中有一段著名的“德才论”：“是故才德全尽谓之圣人，才德兼亡谓之愚人，德胜才谓之君子，才胜德谓之小人。凡取人之术，苟不得圣人，君子而与之，与其得小人，不若得愚人。”</p>
+<p>现给出一批考生的德才分数，请根据司马光的理论给出录取排名。</p>
+<p>输入格式：<br>输入第一行给出 3 个正整数，分别为：N（≤10<br>​5<br>​​ ），即考生总数；L（≥60），为录取最低分数线，即德分和才分均不低于 L 的考生才有资格被考虑录取；H（&lt;100），为优先录取线——德分和才分均不低于此线的被定义为“才德全尽”，此类考生按德才总分从高到低排序；才分不到但德分到线的一类考生属于“德胜才”，也按总分排序，但排在第一类考生之后；德才分均低于 H，但是德分不低于才分的考生属于“才德兼亡”但尚有“德胜才”者，按总分排序，但排在第二类考生之后；其他达到最低线 L 的考生也按总分排序，但排在第三类考生之后。</p>
+<p>随后 N 行，每行给出一位考生的信息，包括：准考证号、德分、才分，其中准考证号为 8 位整数，德才分为区间 [0, 100] 内的整数。数字间以空格分隔。</p>
+<p>输出格式：<br>输出第一行首先给出达到最低分数线的考生人数 M，随后 M 行，每行按照输入格式输出一位考生的信息，考生按输入中说明的规则从高到低排序。当某类考生中有多人总分相同时，按其德分降序排列；若德分也并列，则按准考证号的升序输出。</p>
+<blockquote>
+<p>输入样例：<br>14 60 80<br>10000001 64 90<br>10000002 90 60<br>10000011 85 80<br>10000003 85 80<br>10000004 80 85<br>10000005 82 77<br>10000006 83 76<br>10000007 90 78<br>10000008 75 79<br>10000009 59 90<br>10000010 88 45<br>10000012 80 100<br>10000013 90 99<br>10000014 66 60<br>输出样例：<br>12<br>10000013 90 99<br>10000012 80 100<br>10000003 85 80<br>10000011 85 80<br>10000004 80 85<br>10000007 90 78<br>10000006 83 76<br>10000005 82 77<br>10000002 90 60<br>10000014 66 60<br>10000008 75 79<br>10000001 64 90</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct student&#123;
+    int num,de,cai,sum,flag;
+&#125;;
+bool cmp(student a,student b)&#123;
+    if(a.flag!=b.flag)return a.flag &lt;b.flag ;
+    else if(a.sum!=b.sum)return a.sum&gt;b.sum ;
+    else if(a.de!=b.de)return a.de&gt;b.de ;
+    else return a.num&lt;b.num;
+&#125;
+int main()&#123;
+    ios::sync_with_stdio(false);
+    int n,l,h,cn=0;
+    cin&gt;&gt;n&gt;&gt;l&gt;&gt;h;
+    student x[n];
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;x[i].num &gt;&gt;x[i].de &gt;&gt;x[i].cai ;
+        if(x[i].cai&gt;=l&amp;&amp;x[i].de&gt;=l)&#123;
+            cn++;
+            x[i].sum=x[i].cai +x[i].de ;
+            if(x[i].cai &gt;=h&amp;&amp;x[i].de &gt;=h)x[i].flag=1;
+            else if(x[i].de&gt;=h)x[i].flag=2;
+            else if(x[i].de&gt;=x[i].cai )x[i].flag=3;
+            else x[i].flag=4;
+        &#125;
+        else i--,n--;
+    &#125;
+    sort(x,x+n,cmp);
+    cout&lt;&lt;cn&lt;&lt;endl;
+    for(int i=0;i&lt;n;i++)&#123;
+        cout&lt;&lt;x[i].num &lt;&lt;&quot; &quot;&lt;&lt;x[i].de&lt;&lt;&quot; &quot;&lt;&lt;x[i].cai&lt;&lt;endl;
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<h3 id="7-9-输出三角形面积和周长-15分"><a href="#7-9-输出三角形面积和周长-15分" class="headerlink" title="7-9 输出三角形面积和周长 (15分)"></a>7-9 输出三角形面积和周长 (15分)</h3><p>本题要求编写程序，根据输入的三角形的三条边a、b、c，计算并输出面积和周长。注意：在一个三角形中， 任意两边之和大于第三边。三角形面积计算公式：area=√<br>​s(s−a)(s−b)(s−c)<br>​<br>​​ ，其中s=(a+b+c)/2。</p>
+<p>输入格式：<br>输入为3个正整数，分别代表三角形的3条边a、b、c。</p>
+<p>输出格式：<br>如果输入的边能构成一个三角形，则在一行内，按照</p>
+<p>area = 面积; perimeter = 周长<br>的格式输出，保留两位小数。否则，输出</p>
+<blockquote>
+<p>These sides do not correspond to a valid triangle<br>输入样例1：<br>5 5 3<br>输出样例1：<br>area = 7.15; perimeter = 13.00<br>输入样例2：<br>1 4 1<br>输出样例2：<br>These sides do not correspond to a valid triangle</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int a,b,c;
+    cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
+    double s,area,perimeter;
+    s=(a+b+c)/2.0;
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+    perimeter=a+b+c;
+    if(a-b&lt;c&amp;&amp;b-c&lt;a&amp;&amp;c-a&lt;b)&#123;
+        cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;&quot;area = &quot;&lt;&lt;area&lt;&lt;&quot;; perimeter = &quot;&lt;&lt;perimeter;
+    &#125;else cout&lt;&lt;&quot;These sides do not correspond to a valid triangle&quot;;
+return 0;
+&#125; 
+</code></pre>
+<h3 id="7-11-跟奥巴马一起画方块-15分"><a href="#7-11-跟奥巴马一起画方块-15分" class="headerlink" title="7-11 跟奥巴马一起画方块 (15分)"></a>7-11 跟奥巴马一起画方块 (15分)</h3><p>美国总统奥巴马不仅呼吁所有人都学习编程，甚至以身作则编写代码，成为美国历史上首位编写计算机代码的总统。2014年底，为庆祝“计算机科学教育周”正式启动，奥巴马编写了很简单的计算机代码：在屏幕上画一个正方形。现在你也跟他一起画吧！</p>
+<p>输入格式：<br>输入在一行中给出正方形边长N（3≤N≤21）和组成正方形边的某种字符C，间隔一个空格。</p>
+<p>输出格式：<br>输出由给定字符C画出的正方形。但是注意到行间距比列间距大，所以为了让结果看上去更像正方形，我们输出的行数实际上是列数的50%（四舍五入取整）。</p>
+<blockquote>
+<p>输入样例：<br>10 a<br>输出样例：<br>aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaaaaa</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n;
+    char a;
+    cin&gt;&gt;n&gt;&gt;a;
+    int k=n/2.0+0.5;
+    char b[n][k];
+    for(int i=1;i&lt;=k;i++)&#123;
+        for(int j=1;j&lt;=n;j++)&#123;
+        cout&lt;&lt;a;
+        &#125;
+        cout&lt;&lt;endl;    
+    &#125;
+return 0;
+&#125; 
+</code></pre>
+<p>7-10 然后是几点 (15分)<br>有时候人们用四位数字表示一个时间，比如1106表示11点零6分。现在，你的程序要根据起始时间和流逝的时间计算出终止时间。</p>
+<p>读入两个数字，第一个数字以这样的四位数字表示当前时间，第二个数字表示分钟数，计算当前时间经过那么多分钟后是几点，结果也表示为四位数字。当小时为个位数时，没有前导的零，即5点30分表示为530。注意，第二个数字表示的分钟数可能超过60，也可能是负数。</p>
+<p>输入格式：<br>输入在一行中给出2个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即5点30分表示为530；流逝的分钟数可能超过60，也可能是负数。</p>
+<p>输出格式：<br>输出四位数字表示的终止时间，当小时为个位数时，没有前导的零。题目保证起始时间和终止时间在同一天内。</p>
+<p>输入样例：<br>1120 110<br>输出样例：<br>1310</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>int main(){<br>int a,b,sum;<br>cin&gt;&gt;a&gt;&gt;b;<br>sum=a/100<em>60+a%100+b;<br>cout&lt;&lt;sum/60</em>100+sum%60;<br>return 0;<br>}</p>
+<p>7-12 最佳情侣身高差 (10分)<br>专家通过多组情侣研究数据发现，最佳的情侣身高差遵循着一个公式：（女方的身高）×1.09 =（男方的身高）。如果符合，你俩的身高差不管是牵手、拥抱、接吻，都是最和谐的差度。</p>
+<p>下面就请你写个程序，为任意一位用户计算他/她的情侣的最佳身高。</p>
+<p>输入格式：<br>输入第一行给出正整数N（≤10），为前来查询的用户数。随后N行，每行按照“性别 身高”的格式给出前来查询的用户的性别和身高，其中“性别”为“F”表示女性、“M”表示男性；“身高”为区间 [1.0, 3.0] 之间的实数。</p>
+<p>输出格式：<br>对每一个查询，在一行中为该用户计算出其情侣的最佳身高，保留小数点后2位。</p>
+<p>输入样例：<br>2<br>M 1.75<br>F 1.8<br>输出样例：<br>1.61<br>1.96</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>int main(){<br>    int n;<br>    cin&gt;&gt;n;<br>    char a;<br>    double b;<br>    for(int i=0;i&lt;n;i++){<br>    cin&gt;&gt;a&gt;&gt;b;<br>    if(a==’M’)cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;b/1.09&lt;&lt;endl;<br>    else cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;b*1.09&lt;&lt;endl;<br>    }<br>    return 0;<br>} </p>
+<p>7-13 矩阵A乘以B (15分)<br>给定两个矩阵A和B，要求你计算它们的乘积矩阵AB。需要注意的是，只有规模匹配的矩阵才可以相乘。即若A有R<br>​a<br>​​ 行、C<br>​a<br>​​ 列，B有R<br>​b<br>​​ 行、C<br>​b<br>​​ 列，则只有C<br>​a<br>​​ 与R<br>​b<br>​​ 相等时，两个矩阵才能相乘。</p>
+<p>输入格式：<br>输入先后给出两个矩阵A和B。对于每个矩阵，首先在一行中给出其行数R和列数C，随后R行，每行给出C个整数，以1个空格分隔，且行首尾没有多余的空格。输入保证两个矩阵的R和C都是正数，并且所有整数的绝对值不超过100。</p>
+<p>输出格式：<br>若输入的两个矩阵的规模是匹配的，则按照输入的格式输出乘积矩阵AB，否则输出Error: Ca != Rb，其中Ca是A的列数，Rb是B的行数。</p>
+<p>输入样例1：<br>2 3<br>1 2 3<br>4 5 6<br>3 4<br>7 8 9 0<br>-1 -2 -3 -4<br>5 6 7 8<br>输出样例1：<br>2 4<br>20 22 24 16<br>53 58 63 28<br>输入样例2：<br>3 2<br>38 26<br>43 -5<br>0 17<br>3 2<br>-11 57<br>99 68<br>81 72<br>输出样例2：<br>Error: 2 != 3</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>int a[10000][10000],b[10000][10000],c[10000][10000];<br>int sum=0;<br>int main(){<br>int r1,c1,r2,c2;<br>cin&gt;&gt;r1&gt;&gt;c1;<br>for(int i=1;i&lt;=r1;i++){<br>    for(int j=1;j&lt;=c1;j++)<br>        cin&gt;&gt;a[i][j];<br>}<br>cin&gt;&gt;r2&gt;&gt;c2;<br>    for(int i=1;i&lt;=r2;i++){<br>        for(int j=1;j&lt;=c2;j++)<br>            cin&gt;&gt;b[i][j];<br>}<br>if(c1==r2){<br>    cout&lt;&lt;r1&lt;&lt;” “&lt;&lt;c2&lt;&lt;endl;<br>for(int i=1;i&lt;=r1;i++){<br>    for(int j=1;j&lt;=c2;j++){<br>        for(int k=1;k&lt;=c1;k++){<br>            c[i][j]+=a[i][k]*b[k][j];<br>        }<br>    }<br>}<br>    for(int i=1;i&lt;=r1;i++){<br>        for(int j=1;j&lt;=c2;j++){<br>            cout&lt;&lt;c[i][j];<br>            if(j!=c2)cout&lt;&lt;” “;}<br>            cout&lt;&lt;endl;<br>}<br>}else cout&lt;&lt;”Error: “&lt;&lt;c1&lt;&lt;” != “&lt;&lt;r2;<br>return 0;<br>}</p>
+<p>7-14 统计素数并求和 (20分)<br>本题要求统计给定整数M和N区间内素数的个数并对它们求和。</p>
+<p>输入格式:<br>输入在一行中给出两个正整数M和N（1≤M≤N≤500）。</p>
+<p>输出格式:<br>在一行中顺序输出M和N区间内素数的个数以及它们的和，数字间以空格分隔。</p>
+<p>输入样例:<br>10 31<br>输出样例:<br>7 143</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>int main(){<br>    int m,n,cn=0,sum=0,flag=0;<br>    cin&gt;&gt;m&gt;&gt;n;<br>    if(m==1)m=2;<br>    for(int i=m;i&lt;=n;i++){<br>        for(int j=2;j&lt;=i-1;j++){<br>            if(i%j==0)flag=1;<br>        } if(flag==0){cn++;sum+=i;}flag=0;<br>    }<br>    cout&lt;&lt;cn&lt;&lt;” “&lt;&lt;sum;<br>return 0;<br>} </p>
+<h3 id="7-15-求一批整数中出现最多的个位数字-20分"><a href="#7-15-求一批整数中出现最多的个位数字-20分" class="headerlink" title="7-15 求一批整数中出现最多的个位数字 (20分)"></a>7-15 求一批整数中出现最多的个位数字 (20分)</h3><p>给定一批整数，分析每个整数的每一位数字，求出现次数最多的个位数字。例如给定3个整数1234、2345、3456，其中出现最多次数的数字是3和4，均出现了3次。</p>
+<p>输入格式：<br>输入在第1行中给出正整数N（≤1000），在第二行中给出N个不超过整型范围的非负整数，数字间以空格分隔。</p>
+<p>输出格式：<br>在一行中按格式“M: n1 n2 …”输出，其中M是最大次数，n1、n2、……为出现次数最多的个位数字，按从小到大的顺序排列。数字间以空格分隔，但末尾不得有多余空格。</p>
+<blockquote>
+<p>输入样例：<br>3<br>1234 2345 3456<br>输出样例：<br>3: 3 4</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int b[10];
+int main()&#123;
+int n,a,k,max=0;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a;
+do&#123;
+        k=a%10;
+        b[k]++;
+        if(b[k]&gt;max)max=b[k];
+        a/=10;        
+    &#125;while(a);
+&#125;
+cout&lt;&lt;max&lt;&lt;&quot;:&quot;;
+for(int i=0;i&lt;10;i++)
+if(b[i]==max)cout&lt;&lt;&quot; &quot;&lt;&lt;i;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-16-验证“哥德巴赫猜想”-20分"><a href="#7-16-验证“哥德巴赫猜想”-20分" class="headerlink" title="7-16 验证“哥德巴赫猜想” (20分)"></a>7-16 验证“哥德巴赫猜想” (20分)</h3><p>数学领域著名的“哥德巴赫猜想”的大致意思是：任何一个大于2的偶数总能表示为两个素数之和。比如：24=5+19，其中5和19都是素数。本实验的任务是设计一个程序，验证20亿以内的偶数都可以分解成两个素数之和。</p>
+<p>输入格式：<br>输入在一行中给出一个(2, 2 000 000 000]范围内的偶数N。</p>
+<p>输出格式：<br>在一行中按照格式“N = p + q”输出N的素数分解，其中p ≤ q均为素数。又因为这样的分解不唯一（例如24还可以分解为7+17），要求必须输出所有解中p最小的解。</p>
+<blockquote>
+<p>输入样例：<br>24<br>输出样例：<br>24 = 5 + 19</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int isprime(int n)&#123;
+if(n==2)return 1;
+else&#123;
+    for(int i=2;i&lt;=sqrt(n);i++)&#123;
+        if(n%i==0)return 0;
+    &#125;
+&#125;
+return 1;    
+&#125;
+int main()&#123;
+int n;
+cin&gt;&gt;n;
+for(int i=2;i&lt;n;i++)&#123;
+    if(isprime(i)&amp;&amp;isprime(n-i))&#123;
+        cout&lt;&lt;n&lt;&lt;&quot; = &quot;&lt;&lt;i&lt;&lt;&quot; + &quot;&lt;&lt;n-i;break;
+    &#125;
+&#125; 
+ 
+return 0;
+&#125;
+</code></pre>
+<p>7-17 爬动的蠕虫 (15分)<br>一条蠕虫长1寸，在一口深为N寸的井的底部。已知蠕虫每1分钟可以向上爬U寸，但必须休息1分钟才能接着往上爬。在休息的过程中，蠕虫又下滑了D寸。就这样，上爬和下滑重复进行。请问，蠕虫需要多长时间才能爬出井？</p>
+<p>这里要求不足1分钟按1分钟计，并且假定只要在某次上爬过程中蠕虫的头部到达了井的顶部，那么蠕虫就完成任务了。初始时，蠕虫是趴在井底的（即高度为0）。</p>
+<p>输入格式：<br>输入在一行中顺序给出3个正整数N、U、D，其中D&lt;U，N不超过100。</p>
+<p>输出格式：<br>在一行中输出蠕虫爬出井的时间，以分钟为单位。</p>
+<p>输入样例：<br>12 3 1<br>输出样例：<br>11</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n,u,d,s=0,cn=0;
+cin&gt;&gt;n&gt;&gt;u&gt;&gt;d;
+while(s&lt;n)&#123;
+    cn++;
+    if(cn%2)s+=u;
+    else s-=d;
+&#125;
+cout&lt;&lt;cn;
+return 0;
+&#125;
+</code></pre>
+<p>7-18 猴子选大王 (20分)<br>一群猴子要选新猴王。新猴王的选择方法是：让N只候选猴子围成一圈，从某位置起顺序编号为1~N号。从第1号开始报数，每轮从1报到3，凡报到3的猴子即退出圈子，接着又从紧邻的下一只猴子开始同样的报数。如此不断循环，最后剩下的一只猴子就选为猴王。请问是原来第几号猴子当选猴王？</p>
+<p>输入格式：<br>输入在一行中给一个正整数N（≤1000）。</p>
+<p>输出格式：<br>在一行中输出当选猴王的编号。</p>
+<p>输入样例：<br>11<br>输出样例：<br>7</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[1010];
+int main()&#123;
+int n,out=0,cn=0,wang;
+cin&gt;&gt;n;
+while(out&lt;n)&#123;
+    for(int i=1;i&lt;=n;i++)&#123;
+        if(a[i]==0)&#123;cn++;wang=i;&#125;
+        if(cn%3==0&amp;&amp;a[i]==0)&#123;a[i]++;out++;cn==0;&#125;
+    &#125;
+&#125;
+cout&lt;&lt;wang; 
+return 0;
+&#125;
+</code></pre>
+<p>7-19 念数字 (15分)<br>输入一个整数，输出每个数字对应的拼音。当整数为负数时，先输出fu字。十个数字对应的拼音如下：</p>
+<p>0: ling<br>1: yi<br>2: er<br>3: san<br>4: si<br>5: wu<br>6: liu<br>7: qi<br>8: ba<br>9: jiu<br>输入格式：<br>输入在一行中给出一个整数，如：1234。</p>
+<p>提示：整数包括负数、零和正数。</p>
+<p>输出格式：<br>在一行中输出这个整数对应的拼音，每个数字的拼音之间用空格分开，行末没有最后的空格。如 yi er san si。</p>
+<p>输入样例：<br>-600<br>输出样例：<br>fu liu ling ling</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>string b[10]={“ling”,”yi”,”er”,”san”,”si”,”wu”,”liu”,”qi”,”ba”,”jiu”};<br>int main(){<br>string s;<br>cin&gt;&gt;s;<br>int x=s.size();<br>int flag=s[0]==’-‘?1:0;<br>if(flag)cout&lt;&lt;”fu “;<br>for(int i=flag;i&lt;x;i++){<br>    cout&lt;&lt;b[s[i]-‘0’];<br>    if(i!=x-1)cout&lt;&lt;” “;<br>}<br>return 0;<br>} </p>
+<p>7-20 到底有多二 (15分)<br>一个整数“犯二的程度”定义为该数字中包含2的个数与其位数的比值。如果这个数是负数，则程度增加0.5倍；如果还是个偶数，则再增加1倍。例如数字-13142223336是个11位数，其中有3个2，并且是负数，也是偶数，则它的犯二程度计算为：3/11×1.5×2×100%，约为81.82%。本题就请你计算一个给定整数到底有多二。</p>
+<p>输入格式：<br>输入第一行给出一个不超过50位的整数N。</p>
+<p>输出格式：<br>在一行中输出N犯二的程度，保留小数点后两位。</p>
+<blockquote>
+<p>输入样例：<br>-13142223336<br>输出样例：<br>81.82%<br>鸣谢安阳师范学院段晓云老师和软件工程五班李富龙同学补充测试数据！</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    char input[1010];
+    double flag=1,ans;    
+    int flag2=1,cn=0,j;
+      scanf(&quot;%s&quot;, &amp;input);
+    if(input[0]==&#39;-&#39;)flag=1.5;
+    for(j=0;input[j] !=&#39;\0&#39;;j++)&#123;
+        if(input[j]==&#39;2&#39;)cn++;
+    &#125;
+    if((input[j-1]-48)%2==0)&#123;flag2=2;&#125;
+    if(flag==1.5)j--;
+    ans=(double)cn/(double)j*flag*flag2*100;
+    cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;ans&lt;&lt;&quot;%&quot;;
+    //printf(&quot;%.2f%%&quot;,out);
+    return 0;
+&#125; 
+</code></pre>
+<h3 id="7-21-重排链表-25分"><a href="#7-21-重排链表-25分" class="headerlink" title="7-21 重排链表 (25分)"></a>7-21 重排链表 (25分)</h3><p>给定一个单链表 L1→L2→⋯→Ln−1→Ln<br>​​ ，请编写程序将链表重新排列为 Ln→L1→Ln−1→L2→⋯。例如：给定L为1→2→3→4→5→6，则输出应该为6→1→5→2→4→3。</p>
+<p>输入格式：<br>每个输入包含1个测试用例。每个测试用例第1行给出第1个结点的地址和结点总个数，即正整数N (≤10<br>​5<br>​​ )。结点的地址是5位非负整数，NULL地址用−1表示。</p>
+<p>接下来有N行，每行格式为：</p>
+<p>Address Data Next<br>其中Address是结点地址；Data是该结点保存的数据，为不超过10<br>​5<br>​​ 的正整数；Next是下一结点的地址。题目保证给出的链表上至少有两个结点。</p>
+<p>输出格式：<br>对每个测试用例，顺序输出重排后的结果链表，其上每个结点占一行，格式与输入相同。</p>
+<p>输入样例：<br>00100 6<br>00000 4 99999<br>00100 1 12309<br>68237 6 -1<br>33218 3 00000<br>99999 5 68237<br>12309 2 33218<br>输出样例：<br>68237 6 00100<br>00100 1 99999<br>99999 5 12309<br>12309 2 00000<br>00000 4 33218<br>33218 3 -1</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct node&#123;        
+    int add;
+    int data;
+    int next;
+&#125;link[100100];
+int main()&#123;
+    int first,n,t;
+    cin&gt;&gt;first&gt;&gt;n;
+    while(n--)&#123;
+        cin&gt;&gt;t;
+        cin&gt;&gt;link[t].data;
+        cin&gt;&gt;link[t].next;
+        link[t].add=t;
+    &#125;
+    vector&lt;int&gt;v; 
+    while(first!=-1)&#123;
+        v.push_back(first);//顺序存储地址 
+        first=link[first].next;
+    &#125;
+    int x=v.size();
+    for(int i=0;i&lt;x/2;i++)&#123;
+        cout&lt;&lt;setw(5)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[x-1-i]&lt;&lt;&quot; &quot;&lt;&lt;link[v[x-1-i]].data&lt;&lt;&quot; &quot;&lt;&lt;setw(5)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[i]&lt;&lt;endl;
+        cout&lt;&lt;setw(5)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[i]&lt;&lt;&quot; &quot;&lt;&lt;link[v[i]].data&lt;&lt;&quot; &quot;;
+        if(i==x/2-1&amp;&amp;x%2==0)cout&lt;&lt;-1;
+        else cout&lt;&lt;setw(5)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[x-2-i]&lt;&lt;endl;
+    &#125;
+    if(x&amp;1)cout&lt;&lt;setw(5)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[x/2]&lt;&lt;&quot; &quot;&lt;&lt;link[x/2].data&lt;&lt;&quot; &quot;&lt;&lt;-1;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/02/19 14:18:43<br>部分正确<br>22    7-21    C++ (g++)    263 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>12    3 ms    424 KB<br>1<br>答案错误<br>0    2 ms    356 KB<br>2<br>答案正确<br>1    3 ms    384 KB<br>3<br>答案正确<br>3    3 ms    372 KB<br>4<br>答案正确<br>6    263 ms    3808 KB</p>
+</blockquote>
+<p>7-22 一元多项式的乘法与加法运算 (20分)<br>设计函数分别求两个一元多项式的乘积与和。</p>
+<p>输入格式:<br>输入分2行，每行分别先给出多项式非零项的个数，再以指数递降方式输入一个多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。</p>
+<p>输出格式:<br>输出分2行，分别以指数递降方式输出乘积多项式以及和多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。零多项式应输出0 0。</p>
+<p>输入样例:<br>4 3 4 -5 2  6 1  -2 0<br>3 5 20  -7 4  3 1<br>输出样例:<br>15 24 -25 22 30 21 -10 20 -21 8 35 6 -33 5 14 4 -15 3 18 2 -6 1<br>5 20 -4 4 -5 2 9 1 -2 0</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a1[1010],a2[1010],b1[1010],b2[1010],c1[1010],c2[1010],d1[1010],d2[1010],e1[1010],e2[1010];
+int main()&#123;
+int n,m;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)
+        cin&gt;&gt;a1[i]&gt;&gt;a2[i];                                             
+cin&gt;&gt;m;
+for(int i=0;i&lt;m;i++)
+        cin&gt;&gt;b1[i]&gt;&gt;b2[i];
+int cn1=0,cn2=0,k=0,cn3=0;
+for(int i=0;i&lt;n;i++)&#123;
+    for(int j=0;j&lt;m;j++)&#123;
+        if(a2[i]==b2[j])&#123;cn3++;&#125;
+         c1[k]=a1[i]*b1[j];c2[k]=a2[i]+b2[j];
+        //if(c2[k]!=0)&#123;c1[k]+=a1[i]*b1[j];cn2++;&#125;
+        cn1++;k++;
+    &#125;        
+&#125;
+for(int j=0;j&lt;cn1-cn2;j++)&#123;
+    for(int i=0;i&lt;cn1-cn2-1;i++)&#123;
+        if(c2[i]&lt;c2[i+1])&#123;
+            int t=c2[i+1];
+            c2[i+1]=c2[i];
+            c2[i]=t;
+            int tt=c1[i+1];
+            c1[i+1]=c1[i];
+            c1[i]=tt;&#125;    
+        &#125;
+&#125;
+k=0;
+for(int i=0;i&lt;cn1-cn2;i++)&#123;
+
+    //else &#123;
+        e1[k]=c1[k];
+        e2[k]=c2[k];
+        
+    if(c2[i]==c2[i+1])&#123;
+    e1[k]=c1[i]+c1[i+1];k++;
+    &#125;k++;
+&#125;
+for(int i=0;i&lt;cn1-cn2;i++)&#123;
+    if(e1[i]!=0)cout&lt;&lt;e1[i]&lt;&lt;&quot; &quot;&lt;&lt;e2[i];
+    if(i!=cn1-cn2-1&amp;&amp;e1[i]!=0)cout&lt;&lt;&quot; &quot;;
+&#125;
+cout&lt;&lt;endl;
+cn1=0,cn2=0,k=0;
+for(int i=0;i&lt;n;i++)&#123;
+    for(int j=0;j&lt;m;j++)&#123;
+        if(a2[i]==b2[j])&#123;d1[k]=a1[i]+b1[j];d2[k]=a2[i];cn2++;a1[i]=b1[j]=0;k++;&#125;
+        cn1++;
+    &#125;            
+&#125;
+for(int i=0;i&lt;n;i++)
+        if(a1[i]!=0)&#123;d1[k]=a1[i];d2[k]=a2[i];k++;&#125;
+for(int i=0;i&lt;n;i++)
+        if(b1[i]!=0)&#123;d1[k]=b1[i];d2[k]=b2[i];k++;&#125;
+for(int j=0;j&lt;cn1-cn2-1;j++)&#123;
+    for(int i=0;i&lt;cn1-1;i++)&#123;
+        if(d2[i]&lt;d2[i+1])&#123;
+            int t=d2[i+1];
+            d2[i+1]=d2[i];
+            d2[i]=t;
+            int tt=d1[i+1];
+            d1[i+1]=d1[i];
+            d1[i]=tt;&#125;    
+        &#125;
+&#125;
+for(int i=0;i&lt;k;i++)&#123;
+    cout&lt;&lt;d1[i]&lt;&lt;&quot; &quot;&lt;&lt;d2[i];
+    if(i!=k-1)cout&lt;&lt;&quot; &quot;;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2019/12/13 13:32:59<br>部分正确<br>12    7-22    C++ (g++)    3 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>12    3 ms    480 KB<br>1<br>答案错误<br>0    3 ms    424 KB<br>2<br>答案错误<br>0    3 ms    384 KB<br>3<br>答案错误<br>0    2 ms    364 KB</p>
+</blockquote>
+<p>7-23 通讯录排序 (20分)<br>输入n个朋友的信息，包括姓名、生日、电话号码，本题要求编写程序，按照年龄从大到小的顺序依次输出通讯录。题目保证所有人的生日均不相同。</p>
+<p>输入格式:<br>输入第一行给出正整数n（&lt;10）。随后n行，每行按照“姓名 生日 电话号码”的格式给出一位朋友的信息，其中“姓名”是长度不超过10的英文字母组成的字符串，“生日”是yyyymmdd格式的日期，“电话号码”是不超过17位的数字及+、-组成的字符串。</p>
+<p>输出格式:<br>按照年龄从大到小输出朋友的信息，格式同输出。</p>
+<p>输入样例:<br>3<br>zhang 19850403 13912345678<br>wang 19821020 +86-0571-88018448<br>qian 19840619 13609876543<br>输出样例:<br>wang 19821020 +86-0571-88018448<br>qian 19840619 13609876543<br>zhang 19850403 13912345678</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct tell&#123;
+    char name[10];
+    int date; 
+    char tel[20];
+&#125;t[10],tt;
+int main()&#123;
+int n;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;t[i].name&gt;&gt;t[i].date&gt;&gt;t[i].tel;
+&#125;
+for(int i=0;i&lt;n-1;i++)&#123;
+    for(int j=0;j&lt;n-1;j++)&#123;
+        if(t[j].date&gt;t[j+1].date)&#123;
+            tt=t[j+1];
+            t[j+1]=t[j];
+            t[j]=tt;
+        &#125;
+    &#125;
+&#125;
+for(int i=0;i&lt;n;i++)&#123;
+    cout&lt;&lt;t[i].name&lt;&lt;&quot; &quot;&lt;&lt;t[i].date&lt;&lt;&quot; &quot;&lt;&lt;t[i].tel&lt;&lt;endl;    
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-24 求整数的位数及各位数字之和 (15分)<br>对于给定的正整数N，求它的位数及其各位数字之和。</p>
+<p>输入格式：<br>输入在一行中给出一个不超过10<br>​9<br>​​ 的正整数N。</p>
+<p>输出格式：<br>在一行中输出N的位数及其各位数字之和，中间用一个空格隔开。</p>
+<p>输入样例：<br>321<br>输出样例：<br>3 6</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n,sum=0,cn=0;
+cin&gt;&gt;n;
+while(n)&#123;
+    int k=n%10;
+    sum+=k;
+    cn++;
+    n/=10;
+&#125;
+cout&lt;&lt;cn&lt;&lt;&quot; &quot;&lt;&lt;sum;
+return 0;
+&#125; 
+</code></pre>
+<p>7-25 说反话-加强版 (20分)<br>给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。</p>
+<p>输入格式：<br>测试输入包含一个测试用例，在一行内给出总长度不超过500 000的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用若干个空格分开。</p>
+<p>输出格式：<br>每个测试用例的输出占一行，输出倒序后的句子，并且保证单词间只有1个空格。</p>
+<p>输入样例：<br>Hello World   Here I Come<br>输出样例：<br>Come I Here World Hello<br>感谢杭州电子科技大学李卫明老师修正数据! 感谢浙江工业大学之江学院石洗凡老师修正测试点提示。</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string b[500500];
+int main()&#123;
+    int i=1;
+    while(cin&gt;&gt;*(b+i))
+        i++;
+        int j;    
+    for( j=i-1;j&gt;0;j--)&#123;
+        if(j!=i-1)cout&lt;&lt;&quot; &quot;;
+        cout&lt;&lt;*(b+j);    
+    &#125;    
+    return 0;
+&#125;
+</code></pre>
+<p>7-26 约分最简分式 (15分)<br>分数可以表示为分子/分母的形式。编写一个程序，要求用户输入一个分数，然后将其约分为最简分式。最简分式是指分子和分母不具有可以约分的成分了。如6/12可以被约分为1/2。当分子大于分母时，不需要表达为整数又分数的形式，即11/8还是11/8；而当分子分母相等时，仍然表达为1/1的分数形式。</p>
+<p>输入格式：<br>输入在一行中给出一个分数，分子和分母中间以斜杠/分隔，如：12/34表示34分之12。分子和分母都是正整数（不包含0，如果不清楚正整数的定义的话）。</p>
+<p>提示：在scanf的格式字符串中加入/，让scanf来处理这个斜杠。</p>
+<p>输出格式：<br>在一行中输出这个分数对应的最简分式，格式与输入的相同，即采用分子/分母的形式表示分数。如 5/6表示6分之5。</p>
+<p>输入样例：<br>66/120<br>输出样例：<br>11/20</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int a,b,min;
+char c;
+cin&gt;&gt;a&gt;&gt;c&gt;&gt;b;
+if(a&lt;b)min=a;
+else min=b;
+for(int i=min;i&gt;=1;--i)&#123;
+    if(a%i==0&amp;b%i==0)&#123;cout&lt;&lt;a/i&lt;&lt;&quot;/&quot;&lt;&lt;b/i;break;&#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-27 一元多项式求导 (20分)<br>设计函数求一元多项式的导数。</p>
+<p>输入格式:<br>以指数递降方式输入多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。</p>
+<p>输出格式:<br>以与输入相同的格式输出导数多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。</p>
+<p>输入样例:<br>3 4 -5 2 6 1 -2 0<br>输出样例:<br>12 3 -10 1 6 0</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+int c[1000000],d[1000000];
+using namespace std;
+int main()&#123;
+int a,b,cn=0;
+while(cin&gt;&gt;a&gt;&gt;b)&#123;
+    if(b==0)break;
+    c[cn]=a*b;
+    d[cn]=b-1;
+    cn++;
+&#125;
+int i=0;
+while(cn--)&#123;
+//    if(c[i]==0)cout&lt;&lt;0&lt;&lt;&quot; &quot;&lt;&lt;0;
+//    else 
+    cout&lt;&lt;c[i]&lt;&lt;&quot; &quot;&lt;&lt;d[i];
+    if(cn!=0)cout&lt;&lt;&quot; &quot;;
+    i++;
+&#125;        
+return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2019/12/21 08:53:25<br>部分正确<br>18    7-27    C++ (g++)    5 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>12    4 ms    356 KB<br>1<br>答案正确<br>5    5 ms    424 KB<br>2<br>答案错误<br>0    5 ms    384 KB<br>3<br>答案正确<br>1    5 ms    424 KB<br>4<br>答案错误<br>0    5 ms    384 KB</p>
+</blockquote>
+<p>7-28 求前缀表达式的值 (25分)<br>算术表达式有前缀表示法、中缀表示法和后缀表示法等形式。前缀表达式指二元运算符位于两个运算数之前，例如2+3*(7-4)+8/4的前缀表达式是：+ + 2 * 3 - 7 4 / 8 4。请设计程序计算前缀表达式的结果值。</p>
+<p>输入格式:<br>输入在一行内给出不超过30个字符的前缀表达式，只包含+、-、*、/以及运算数，不同对象（运算数、运算符号）之间以空格分隔。</p>
+<p>输出格式:<br>输出前缀表达式的运算结果，保留小数点后1位，或错误信息ERROR。</p>
+<blockquote>
+<p>输入样例:<br>++ 2 * 3 - 7 4 / 8 4<br>输出样例:<br>13.0</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    stack &lt;double&gt; q;
+    string a[100];
+    int n=-1,flag=0;
+    while(cin&gt;&gt;a[++n]);
+    for(int i=n-1;i&gt;=0;i--)&#123;
+        if(isdigit(a[i][a[i].size()-1]))&#123;
+            q.push(atof(a[i].c_str()));
+        &#125;else&#123;
+            if(q.size()&lt;2)&#123;flag=1;break;&#125;
+            double x1=q.top();q.pop();
+            double x2=q.top();q.pop();
+            if(a[i][0]==&#39;+&#39;)q.push(x1+x2);
+            else if(a[i][0]==&#39;-&#39;)q.push(x1-x2);
+            else if(a[i][0]==&#39;*&#39;)q.push(x1*x2);
+            else if(a[i][0]==&#39;/&#39;)&#123;
+                if(x2==0)&#123;flag=1;break;&#125;
+                q.push(x1/x2);&#125;                
+            &#125;      
+    &#125; 
+    if(q.size()!=1)flag=1;
+    if(flag)cout&lt;&lt;&quot;ERROR&quot;;
+    else cout&lt;&lt;fixed&lt;&lt;setprecision(1)&lt;&lt;q.top();
+&#125;
+</code></pre>
+<p>7-29 符号配对 (20分)<br>请编写程序检查C语言源程序中下列符号是否配对：/<em>与</em>/、(与)、[与]、{与}。</p>
+<p>输入格式:<br>输入为一个C语言源程序。当读到某一行中只有一个句点.和一个回车的时候，标志着输入结束。程序中需要检查配对的符号不超过100个。</p>
+<p>输出格式:<br>首先，如果所有符号配对正确，则在第一行中输出YES，否则输出NO。然后在第二行中指出第一个不配对的符号：如果缺少左符号，则输出?-右符号；如果缺少右符号，则输出左符号-?。</p>
+<p>输入样例1：<br>void test()<br>{<br>    int i, A[10];<br>    for (i=0; i&lt;10; i++) /*/<br>        A[i] = i;<br>}<br>.</p>
+<p>输出样例1：<br>NO<br>/*-?<br>输入样例2：<br>void test()<br>{<br>    int i, A[10];<br>    for (i=0; i&lt;10; i++) /**/<br>        A[i] = i;<br>}]<br>.</p>
+<p>输出样例2：<br>NO<br>?-]<br>输入样例3：<br>void test()<br>{<br>    int i<br>    double A[10];<br>    for (i=0; i&lt;10; i++) /**/<br>        A[i] = 0.1*i;<br>}<br>.</p>
+<p>输出样例3：<br>YES</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    string s;
+    char a[110],b[110];
+    int cn=0,cn2=0,flag=1;
+    while(cin&gt;&gt;s&amp;&amp;s!=&quot;.&quot;)&#123;
+        for(int i=0;i&lt;s.size();i++)&#123;
+        if(s[i]==&#39;(&#39;||s[i]==&#39;[&#39;||s[i]==&#39;&#123;&#39;||s[i]==&#39;)&#39;||s[i]==&#39;]&#39;||s[i]==&#39;&#125;&#39;)a[cn++]=s[i];
+        else if(s[i]==&#39;/&#39;&amp;&amp;s[i+1]==&#39;*&#39;)a[cn++]=&#39;&lt;&#39;,i++;
+        else if(s[i]==&#39;*&#39;&amp;&amp;s[i+1]==&#39;/&#39;)a[cn++]=&#39;&gt;&#39;,i++;
+        &#125;
+    &#125;
+    map&lt;char,char&gt;q;
+    q[&#39;(&#39;]=&#39;)&#39;;
+    q[&#39;[&#39;]=&#39;]&#39;;
+    q[&#39;&#123;&#39;]=&#39;&#125;&#39;;
+    q[&#39;&lt;&#39;]=&#39;&gt;&#39;;
+    for(int i=0;i&lt;cn;i++)&#123;
+        if(a[i]==&#39;(&#39;||a[i]==&#39;[&#39;|| a[i]==&#39;&#123;&#39;||a[i]==&#39;&lt;&#39;)b[cn2++]=a[i];
+        else if(cn2&amp;&amp;q[b[cn2-1]]==a[i])cn2--;
+        else&#123;
+            flag=0;
+            cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;
+            if(!cn2)&#123;//如果a栈为空，那么缺少与之对应的左括号
+                if(a[i]==&#39;&gt;&#39;)cout&lt;&lt;&quot;?-*/&quot;;
+                else cout&lt;&lt;&quot;?-&quot;&lt;&lt;a[i];
+            &#125;
+            else&#123;//如果栈顶元素与之不匹配，那么缺少与栈顶元素相匹配的右括号
+                if(b[cn2-1]==&#39;&lt;&#39;)cout&lt;&lt;&quot;/*-?&quot;;
+                else cout&lt;&lt;b[cn2-1]&lt;&lt;&quot;-?&quot;;
+            &#125;
+            break;
+        &#125;
+    &#125;
+    if(flag)&#123;
+        if(!cn2)cout&lt;&lt;&quot;YES&quot;;//处理完之后，如果栈为空，则表示完全匹配
+        else &#123;//如果有剩余，那么就是缺少右括号
+            cout&lt;&lt;&quot;NO&quot;&lt;&lt;endl;
+            if(b[cn2-1]==&#39;&lt;&#39;)cout&lt;&lt;&quot;/*-?&quot;;
+            else cout&lt;&lt;b[cn2-1]&lt;&lt;&quot;-?&quot;;    
+        &#125;
+    &#125;    
+return 0;
+&#125;
+</code></pre>
+<p>7-30 两个有序链表序列的合并 (20分)<br>已知两个非降序链表序列S1与S2，设计函数构造出S1与S2合并后的新的非降序链表S3。</p>
+<p>输入格式:<br>输入分两行，分别在每行给出由若干个正整数构成的非降序序列，用−1表示序列的结尾（−1不属于这个序列）。数字用空格间隔。</p>
+<p>输出格式:<br>在一行中输出合并后新的非降序链表，数字间用空格分开，结尾不能有多余空格；若新链表为空，输出NULL。</p>
+<p>输入样例:<br>1 3 5 -1<br>2 4 6 8 10 -1<br>输出样例:<br>1 2 3 4 5 6 8 10</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[100000000];
+int main()&#123;
+    long long n,m=0;
+    while(cin&gt;&gt;n&amp;&amp;n!=-1)&#123;
+        a[m]=n;
+        m++;
+    &#125;
+    while(cin&gt;&gt;n&amp;&amp;n!=-1)&#123;
+        a[m]=n;
+        m++;
+    &#125;
+    sort(a,a+m);
+    if(m==0)&#123;
+        cout&lt;&lt;&quot;NULL&quot;;
+    &#125;else&#123;
+        for(int i=0;i&lt;m;i++)&#123;
+            cout&lt;&lt;a[i];
+            if(i!=m-1)cout&lt;&lt;&quot; &quot;;
+        &#125;
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<p>7-31 两个有序序列的中位数 (25分)<br>已知有两个等长的非降序序列S1, S2, 设计函数求S1与S2并集的中位数。有序序列A<br>​0<br>​​ ,A<br>​1<br>​​ ,⋯,A<br>​N−1<br>​​ 的中位数指A<br>​(N−1)/2<br>​​ 的值,即第⌊(N+1)/2⌋个数（A<br>​0<br>​​ 为第1个数）。</p>
+<p>输入格式:<br>输入分三行。第一行给出序列的公共长度N（0&lt;N≤100000），随后每行输入一个序列的信息，即N个非降序排列的整数。数字用空格间隔。</p>
+<p>输出格式:<br>在一行中输出两个输入序列的并集序列的中位数。</p>
+<blockquote>
+<p>输入样例1:<br>5<br>1 3 5 7 9<br>2 3 4 5 6<br>输出样例1:<br>4<br>输入样例2:<br>6<br>-100 -10 1 1 1 1<br>-50 0 2 3 4 5<br>输出样例2:<br>1</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n;
+    cin&gt;&gt;n;
+    int a[2*n];
+    for(int i=0;i&lt;2*n;i++)&#123;
+        cin&gt;&gt;a[i]; 
+    &#125; 
+    sort(a,a+2*n);
+    cout&lt;&lt;a[n-1];
+    return 0;
+&#125;
+</code></pre>
+<p>7-32 大笨钟 (10分)<br>微博上有个自称“大笨钟V”的家伙，每天敲钟催促码农们爱惜身体早点睡觉。不过由于笨钟自己作息也不是很规律，所以敲钟并不定时。一般敲钟的点数是根据敲钟时间而定的，如果正好在某个整点敲，那么“当”数就等于那个整点数；如果过了整点，就敲下一个整点数。另外，虽然一天有24小时，钟却是只在后半天敲1~12下。例如在23:00敲钟，就是“当当当当当当当当当当当”，而到了23:01就会是“当当当当当当当当当当当当”。在午夜00:00到中午12:00期间（端点时间包括在内），笨钟是不敲的。</p>
+<p>下面就请你写个程序，根据当前时间替大笨钟敲钟。</p>
+<p>输入格式：<br>输入第一行按照hh:mm的格式给出当前时间。其中hh是小时，在00到23之间；mm是分钟，在00到59之间。</p>
+<p>输出格式：<br>根据当前时间替大笨钟敲钟，即在一行中输出相应数量个Dang。如果不是敲钟期，则输出：</p>
+<p>Only hh:mm.  Too early to Dang.<br>其中hh:mm是输入的时间。</p>
+<p>输入样例1：<br>19:05<br>输出样例1：<br>DangDangDangDangDangDangDangDang<br>输入样例2：<br>07:05<br>输出样例2：<br>Only 07:05.  Too early to Dang.</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int h,m;
+char a;
+cin&gt;&gt;h&gt;&gt;a&gt;&gt;m;
+int h1=(h+1)-12,h2=h-12;
+if(h&lt;=12&amp;&amp;h&gt;=0)&#123;    
+cout&lt;&lt;&quot;Only &quot;;
+if(h/10==0)cout&lt;&lt;0;
+cout&lt;&lt;h&lt;&lt;&quot;:&quot;;
+if(m/10==0)cout&lt;&lt;0;
+cout&lt;&lt;m&lt;&lt;&quot;.  Too early to Dang.&quot;;&#125;
+else&#123;
+    if(m==0)&#123;
+        while(h2--)cout&lt;&lt;&quot;Dang&quot;;
+    &#125;
+    else &#123;
+        while(h1--)cout&lt;&lt;&quot;Dang&quot;;
+    &#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-33 输出GPLT (20分)<br>给定一个长度不超过10000的、仅由英文字母构成的字符串。请将字符重新调整顺序，按GPLTGPLT….这样的顺序输出，并忽略其它字符。当然，四种字符（不区分大小写）的个数不一定是一样多的，若某种字符已经输出完，则余下的字符仍按GPLT的顺序打印，直到所有字符都被输出。</p>
+<p>输入格式：<br>输入在一行中给出一个长度不超过10000的、仅由英文字母构成的非空字符串。</p>
+<p>输出格式：<br>在一行中按题目要求输出排序后的字符串。题目保证输出非空。</p>
+<p>输入样例：<br>pcTclnGloRgLrtLhgljkLhGFauPewSKgt<br>输出样例：<br>GPLTGPLTGLTGLGLL</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string a[4]=&#123;&quot;G&quot;,&quot;P&quot;,&quot;L&quot;,&quot;T&quot;&#125;;
+int b[4];
+int main()&#123;
+    string c;
+    cin&gt;&gt;c;
+    int x=c.length();
+    for(int i=0;i&lt;=x;i++)&#123;
+            if(c[i]==&#39;g&#39;||c[i]==&#39;G&#39;)b[0]++;
+            if(c[i]==&#39;p&#39;||c[i]==&#39;P&#39;)b[1]++;
+            if(c[i]==&#39;l&#39;||c[i]==&#39;L&#39;)b[2]++;
+            if(c[i]==&#39;t&#39;||c[i]==&#39;T&#39;)b[3]++;
+    &#125;
+    int max=0;
+    for(int i=0;i&lt;4;i++)
+    if(max&lt;b[i])max=b[i];
+    
+    for(int i=0;i&lt;max;i++)&#123;
+        for(int j=0;j&lt;4;j++)&#123;
+            if(b[j])&#123;cout&lt;&lt;a[j];b[j]--;&#125;
+        &#125;
+    &#125;
+return 0;
+&#125; 
+</code></pre>
+<p>7-34 出生年 (15分)</p>
+<p>以上是新浪微博中一奇葩贴：“我出生于1988年，直到25岁才遇到4个数字都不相同的年份。”也就是说，直到2013年才达到“4个数字都不相同”的要求。本题请你根据要求，自动填充“我出生于y年，直到x岁才遇到n个数字都不相同的年份”这句话。</p>
+<p>输入格式：<br>输入在一行中给出出生年份y和目标年份中不同数字的个数n，其中y在[1, 3000]之间，n可以是2、或3、或4。注意不足4位的年份要在前面补零，例如公元1年被认为是0001年，有2个不同的数字0和1。</p>
+<p>输出格式：<br>根据输入，输出x和能达到要求的年份。数字间以1个空格分隔，行首尾不得有多余空格。年份要按4位输出。注意：所谓“n个数字都不相同”是指不同的数字正好是n个。如“2013”被视为满足“4位数字都不同”的条件，但不被视为满足2位或3位数字不同的条件。</p>
+<p>输入样例1：<br>1988 4<br>输出样例1：<br>25 2013<br>输入样例2：<br>1 2<br>输出样例2：<br>0 0001</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[10];
+int main()&#123;
+int y,n,cn=0,i;
+cin&gt;&gt;y&gt;&gt;n;
+for(i=y;;i++)&#123;
+    int k=i;
+    if(k/1000==0)a[0]++;
+    while(k)&#123;
+        int j=k%10;
+        a[j]++;
+        k/=10;&#125;        
+    for(int x=0;x&lt;=9;x++)
+        if(a[x])cn++;
+    if(cn==n)break;
+    cn=0;
+    memset(a,0,sizeof(a));
+&#125;
+cout&lt;&lt;i-y&lt;&lt;&quot; &quot;;
+
+int s=i;
+if(i*10&lt;10000&amp;&amp;i*10&gt;=10)cout&lt;&lt;0;
+i*=10;
+if(i*10&lt;10000&amp;&amp;i*10&gt;=100)cout&lt;&lt;0;
+i*=10;
+if(i*10&lt;10000&amp;&amp;i*10&gt;=1000)cout&lt;&lt;0;
+cout&lt;&lt;s;
+return 0;
+&#125;
+</code></pre>
+<p>7-35 多项式A除以B (25分)<br>这仍然是一道关于A/B的题，只不过A和B都换成了多项式。你需要计算两个多项式相除的商Q和余R，其中R的阶数必须小于B的阶数。</p>
+<p>输入格式：<br>输入分两行，每行给出一个非零多项式，先给出A，再给出B。每行的格式如下：</p>
+<p>N e[1] c[1] … e[N] c[N]<br>其中N是该多项式非零项的个数，e[i]是第i个非零项的指数，c[i]是第i个非零项的系数。各项按照指数递减的顺序给出，保证所有指数是各不相同的非负整数，所有系数是非零整数，所有整数在整型范围内。</p>
+<p>输出格式：<br>分两行先后输出商和余，输出格式与输入格式相同，输出的系数保留小数点后1位。同行数字间以1个空格分隔，行首尾不得有多余空格。注意：零多项式是一个特殊多项式，对应输出为0 0 0.0。但非零多项式不能输出零系数（包括舍入后为0.0）的项。在样例中，余多项式其实有常数项-1/27，但因其舍入后为0.0，故不输出。</p>
+<p>输入样例：<br>4 4 1 2 -3 1 -1 0 -1<br>3 2 3 1 -2 0 1<br>输出样例：<br>3 2 0.3 1 0.2 0 -1.0<br>1 1 -3.1</p>
+<p>7-36 装睡 (10分)<br>你永远叫不醒一个装睡的人 —— 但是通过分析一个人的呼吸频率和脉搏，你可以发现谁在装睡！医生告诉我们，正常人睡眠时的呼吸频率是每分钟15-20次，脉搏是每分钟50-70次。下面给定一系列人的呼吸频率与脉搏，请你找出他们中间有可能在装睡的人，即至少一项指标不在正常范围内的人。</p>
+<p>输入格式：<br>输入在第一行给出一个正整数N（≤10）。随后N行，每行给出一个人的名字（仅由英文字母组成的、长度不超过3个字符的串）、其呼吸频率和脉搏（均为不超过100的正整数）。</p>
+<p>输出格式：<br>按照输入顺序检查每个人，如果其至少一项指标不在正常范围内，则输出其名字，每个名字占一行。</p>
+<p>输入样例：<br>4<br>Amy 15 70<br>Tom 14 60<br>Joe 18 50<br>Zoe 21 71<br>输出样例：<br>Tom<br>Zoe</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n;
+cin&gt;&gt;n;
+string a;
+int b,c;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
+    if(b&lt;15||b&gt;20||c&lt;50||c&gt;70)&#123;cout&lt;&lt;a&lt;&lt;endl;&#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-37 秀恩爱分得快 (25分)<br>古人云：秀恩爱，分得快。</p>
+<p>互联网上每天都有大量人发布大量照片，我们通过分析这些照片，可以分析人与人之间的亲密度。如果一张照片上出现了 K 个人，这些人两两间的亲密度就被定义为 1/K。任意两个人如果同时出现在若干张照片里，他们之间的亲密度就是所有这些同框照片对应的亲密度之和。下面给定一批照片，请你分析一对给定的情侣，看看他们分别有没有亲密度更高的异性朋友？</p>
+<p>输入格式：<br>输入在第一行给出 2 个正整数：N（不超过1000，为总人数——简单起见，我们把所有人从 0 到 N-1 编号。为了区分性别，我们用编号前的负号表示女性）和 M（不超过1000，为照片总数）。随后 M 行，每行给出一张照片的信息，格式如下：</p>
+<p>K P[1] … P[K]<br>其中 K（≤ 500）是该照片中出现的人数，P[1] ~ P[K] 就是这些人的编号。最后一行给出一对异性情侣的编号 A 和 B。同行数字以空格分隔。题目保证每个人只有一个性别，并且不会在同一张照片里出现多次。</p>
+<p>输出格式：<br>首先输出 A PA，其中 PA 是与 A 最亲密的异性。如果 PA 不唯一，则按他们编号的绝对值递增输出；然后类似地输出 B PB。但如果 A 和 B 正是彼此亲密度最高的一对，则只输出他们的编号，无论是否还有其他人并列。</p>
+<blockquote>
+<p>输入样例 1：<br>10 4<br>4 -1 2 -3 4<br>4 2 -3 -5 -6<br>3 2 4 -5<br>3 -6 0 2<br>-3 2<br>输出样例 1：<br>-3 2<br>2 -5<br>2 -6<br>输入样例 2：<br>4 4<br>4 -1 2 -3 0<br>2 0 -3<br>2 2 -3<br>2 -1 2<br>-3 2<br>输出样例 2：<br>-3 2</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n,M,k,t;
+    cin&gt;&gt;n&gt;&gt;M;
+    map&lt;int,double&gt;m,m2;
+    while(M--)&#123;
+        cin&gt;&gt;k;
+        for(int i=0;i&lt;k;i++)&#123;
+            cin&gt;&gt;t;
+            if(t&gt;=0)m[t]+=(1.0/k);
+            else m2[t]+=(1.0/k);//m为男，m2为女
+        &#125;
+    &#125;
+    int a,b;
+    double max1=0,max2=0;
+    vector&lt;int&gt;v,v2;
+    map&lt;int,double&gt;::iterator it;
+    for(it=m.begin();it!=m.end();it++)&#123;//m为男
+        if(max1&lt;(it-&gt;second))&#123;
+            v.clear();
+            max1=it-&gt;second;
+            v.push_back(it-&gt;first);//保存编号 
+        &#125;else if(max1==it-&gt;second)&#123;
+            v.push_back(it-&gt;first);//保存编号
+        &#125;
+    &#125;
+    for(it=m2.begin();it!=m2.end();it++)&#123;//m2为女
+        if(max2&lt;(it-&gt;second))&#123;
+            v2.clear();
+            max2=it-&gt;second;
+            v2.push_back(it-&gt;first);//保存编号
+        &#125;else if(max2==(it-&gt;second))&#123;
+            v2.push_back(it-&gt;first);//保存编号
+        &#125;
+    &#125;
+    cin&gt;&gt;a&gt;&gt;b;
+    vector&lt;int&gt;::iterator it2;
+    if(a&lt;0)&#123;    
+        it2=v.begin();
+        if(*it2!=b)&#123;
+            for(it2=v.begin();it2!=v.end();it2++)
+                cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;*it2&lt;&lt;endl;
+        &#125;else cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;endl;
+        it2=v2.end()-1;//负数倒序输出 
+        if(*it2!=a)&#123;
+            for(it2=v2.end()-1;it2&gt;=v2.begin();it2--)
+                cout&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;*it2&lt;&lt;endl;
+        &#125;else return 0;
+    &#125;
+    else&#123;
+        it2=v2.end()-1;
+        if(*it2!=b)&#123;
+            for(it2=v2.end()-1;it2&gt;=v2.begin();it2--)
+                cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;*it2&lt;&lt;endl;
+        &#125;else cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;endl;
+        it2=v.begin();
+        if(*it2!=a)&#123;
+            for(it2=v.begin();it2!=v.end();it2++)
+                cout&lt;&lt;b&lt;&lt;&quot; &quot;&lt;&lt;*it2&lt;&lt;endl;
+        &#125;else return 0;
+    &#125;
+    return 0; 
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/02/19 10:42:05<br>部分正确<br>11    7-37    C++ (g++)    308 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>9    3 ms    384 KB<br>1<br>答案正确<br>2    4 ms    384 KB<br>2<br>答案错误<br>0    3 ms    384 KB<br>3<br>段错误<br>0    5 ms    384 KB<br>4<br>答案错误<br>0    308 ms    420 KB<br>5<br>答案错误<br>0    291 ms    384 KB<br>6<br>答案错误<br>0    4 ms    384 KB</p>
+</blockquote>
+<p>7-38 水仙花数 (20分)<br>水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=13+53+33<br>​​ 。 本题要求编写程序,计算所有N位水仙花数。</p>
+<p>输入格式:<br>输入在一行中给出一个正整数N（3≤N≤7）。</p>
+<p>输出格式:<br>按递增顺序输出所有N位水仙花数，每个数字占一行。</p>
+<p>输入样例:<br>3<br>输出样例:<br>153<br>370<br>371<br>407</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n;
+    cin&gt;&gt;n;
+    int k=1;
+    for(int i=1;i&lt;n;i++)
+        k*=10;
+    
+    int j,m,s=1,sum=0;
+    for(int i=k;i&lt;10*k;i++)&#123;
+            j=i;
+            while(j)&#123;
+                m=j%10;
+                j/=10;
+                    for(int i=0;i&lt;n;i++)
+                    s*=m;
+                sum+=s;
+                s=1;
+            &#125;
+        if(sum==i)cout&lt;&lt;i&lt;&lt;endl;sum=0;
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<p>7-39 IP地址转换 (20分)<br>一个IP地址是用四个字节（每个字节8个位）的二进制码组成。请将32位二进制码表示的IP地址转换为十进制格式表示的IP地址输出。</p>
+<p>输入格式：<br>输入在一行中给出32位二进制字符串。</p>
+<p>输出格式：<br>在一行中输出十进制格式的IP地址，其由4个十进制数组成（分别对应4个8位的二进制数），中间用“.”分隔开。</p>
+<p>输入样例：<br>11001100100101000001010101110010<br>输出样例：<br>204.148.21.114</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string a;
+int b[4];
+int main()&#123;
+int k=0,m=1,sum=0;
+cin&gt;&gt;a;
+reverse(a.begin(),a.end());
+for(int i=0;i&lt;4;++i)&#123;
+    for(int j=0+k;j&lt;8+k;++j)&#123;
+    sum+=(a[j]-48)*m;
+    m*=2;    
+    &#125;
+    k+=8;m=1;
+    b[i]=sum;
+    sum=0;
+&#125; 
+for(int i=3;i&gt;=0;--i)&#123;
+cout&lt;&lt;b[i];
+if(i!=0)cout&lt;&lt;&quot;.&quot;;    
+&#125;    
+return 0;
+&#125;
+</code></pre>
+<p>7-40 藏尾诗 (20分)<br>本题要求编写一个解密藏尾诗的程序。</p>
+<p>输入格式：<br>输入为一首中文藏尾诗，一共四句。每句一行，但句子不一定是等长的，最短一个汉字，最长九个汉字。注意：一个汉字占两个字节。</p>
+<p>输出格式：<br>取出每句的最后一个汉字并连接在一起形成一个字符串并输出。同时在末尾输入一个换行符。</p>
+<p>输入样例：<br>悠悠田园风<br>然而心难平<br>兰花轻涌浪<br>兰香愈幽静<br>输出样例：<br>风平浪静</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string a,b,c,d;
+int main()&#123;
+cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d;
+int a1=a.length();
+int b1=b.length();
+int c1=c.length();
+int d1=d.length();
+cout&lt;&lt;a[a1-2]&lt;&lt;a[a1-1]&lt;&lt;b[b1-2]&lt;&lt;b[b1-1]&lt;&lt;c[c1-2]&lt;&lt;c[c1-1]&lt;&lt;d[d1-2]&lt;&lt;d[d1-1];
+return 0;
+&#125;
+</code></pre>
+<p>7-41 N个数求和 (20分)<br>本题的要求很简单，就是求N个数字的和。麻烦的是，这些数字是以有理数分子/分母的形式给出的，你输出的和也必须是有理数的形式。</p>
+<p>输入格式：<br>输入第一行给出一个正整数N（≤100）。随后一行按格式a1/b1 a2/b2 …给出N个有理数。题目保证所有分子和分母都在长整型范围内。另外，负数的符号一定出现在分子前面。</p>
+<p>输出格式：<br>输出上述数字和的最简形式 —— 即将结果写成整数部分 分数部分，其中分数部分写成分子/分母，要求分子小于分母，且它们没有公因子。如果结果的整数部分为0，则只输出分数部分。</p>
+<p>输入样例1：<br>5<br>2/5 4/15 1/30 -2/60 8/3<br>输出样例1：<br>3 1/3<br>输入样例2：<br>2<br>4/3 2/3<br>输出样例2：<br>2<br>输入样例3：<br>3<br>1/3 -1/6 1/8<br>输出样例3：<br>7/24</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[110],c[110];
+int main()&#123;
+int n;
+char b;
+cin&gt;&gt;n;
+cin&gt;&gt;a[0]&gt;&gt;b&gt;&gt;c[0];
+int fz=a[0],fm=c[0];
+for(int i=1;i&lt;n;i++)&#123;
+    cin&gt;&gt;a[i]&gt;&gt;b&gt;&gt;c[i];
+    if(a[i]==0)continue;
+    fz=fz*c[i]+fm*a[i];
+    fm=fm*c[i];
+&#125;
+if(fz==0)&#123;
+    cout&lt;&lt;0;
+    return 0;
+&#125;
+int x=fz,y=fm;
+if(x&lt;0&amp;&amp;y&gt;0||x&gt;0&amp;&amp;y&lt;0)cout&lt;&lt;&#39;-&#39;;
+fz=fabs(fz);
+fm=fabs(fm);
+int max=fz&gt;fm?fz:fm;
+for(int i=max;i&gt;0;i--)&#123;
+    if(fz%i==0&amp;&amp;fm%i==0)&#123;
+        fz/=i;fm/=i;
+        if(fz&gt;=fm)&#123;
+            cout&lt;&lt;fz/fm;
+            if(fz%fm)&#123;
+                cout&lt;&lt;&quot; &quot;;
+                if(x&lt;0&amp;&amp;y&gt;0||x&gt;0&amp;&amp;y&lt;0)cout&lt;&lt;&#39;-&#39;;
+                cout&lt;&lt;fz%fm&lt;&lt;&quot;/&quot;&lt;&lt;fm;
+            &#125;
+        &#125;
+        else cout&lt;&lt;fz&lt;&lt;&quot;/&quot;&lt;&lt;fm;
+        break;
+    &#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-42 点赞 (20分)<br>微博上有个“点赞”功能，你可以为你喜欢的博文点个赞表示支持。每篇博文都有一些刻画其特性的标签，而你点赞的博文的类型，也间接刻画了你的特性。本题就要求你写个程序，通过统计一个人点赞的纪录，分析这个人的特性。</p>
+<p>输入格式：<br>输入在第一行给出一个正整数N（≤1000），是该用户点赞的博文数量。随后N行，每行给出一篇被其点赞的博文的特性描述，格式为“K F<br>​1<br>​​ ⋯F<br>​K<br>​​ ”，其中1≤K≤10，F<br>​i<br>​​ （i=1,⋯,K）是特性标签的编号，我们将所有特性标签从1到1000编号。数字间以空格分隔。</p>
+<p>输出格式：<br>统计所有被点赞的博文中最常出现的那个特性标签，在一行中输出它的编号和出现次数，数字间隔1个空格。如果有并列，则输出编号最大的那个。</p>
+<p>输入样例：<br>4<br>3 889 233 2<br>5 100 3 233 2 73<br>4 3 73 889 2<br>2 233 123<br>输出样例：<br>233 3</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[1010];
+int main()&#123;
+int n,k,m,max=0;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;k;
+    for(int j=0;j&lt;k;j++)&#123;
+    cin&gt;&gt;m;
+    a[m]++;    
+    if(a[m]&gt;=max)max=a[m];
+    &#125;
+&#125;
+for(int i=1000;i&gt;=0;i--)
+    if(a[i]==max)&#123;cout&lt;&lt;i&lt;&lt;&quot; &quot;&lt;&lt;max;break;&#125;
+return 0;
+&#125; 
+</code></pre>
+<p>7-43 寻找250 (10分)</p>
+<p>对方不想和你说话，并向你扔了一串数…… 而你必须从这一串数字中找到“250”这个高大上的感人数字。</p>
+<p>输入格式：<br>输入在一行中给出不知道多少个绝对值不超过1000的整数，其中保证至少存在一个“250”。</p>
+<p>输出格式：<br>在一行中输出第一次出现的“250”是对方扔过来的第几个数字（计数从1开始）。题目保证输出的数字在整型范围内。</p>
+<p>输入样例：<br>888 666 123 -233 250 13 250 -222<br>输出样例：<br>5</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int n,cn=0;
+    while(cin&gt;&gt;n)&#123;
+        cn++;
+        if(n==250)&#123;cout&lt;&lt;cn;break;&#125;
+    &#125; 
+    return 0;
+&#125;
+</code></pre>
+<p>7-44 天梯赛座位分配 (20分)<br>天梯赛每年有大量参赛队员，要保证同一所学校的所有队员都不能相邻，分配座位就成为一件比较麻烦的事情。为此我们制定如下策略：假设某赛场有 N 所学校参赛，第 i 所学校有 M[i] 支队伍，每队 10 位参赛选手。令每校选手排成一列纵队，第 i+1 队的选手排在第 i 队选手之后。从第 1 所学校开始，各校的第 1 位队员顺次入座，然后是各校的第 2 位队员…… 以此类推。如果最后只剩下 1 所学校的队伍还没有分配座位，则需要安排他们的队员隔位就坐。本题就要求你编写程序，自动为各校生成队员的座位号，从 1 开始编号。</p>
+<p>输入格式：<br>输入在一行中给出参赛的高校数 N （不超过100的正整数）；第二行给出 N 个不超过10的正整数，其中第 i 个数对应第 i 所高校的参赛队伍数，数字间以空格分隔。</p>
+<p>输出格式：<br>从第 1 所高校的第 1 支队伍开始，顺次输出队员的座位号。每队占一行，座位号间以 1 个空格分隔，行首尾不得有多余空格。另外，每所高校的第一行按“#X”输出该校的编号X，从 1 开始。</p>
+<blockquote>
+<p>输入样例：<br>3<br>3 4 2<br>输出样例：<br><code> #1</code><br>1 4 7 10 13 16 19 22 25 28<br>31 34 37 40 43 46 49 52 55 58<br>61 63 65 67 69 71 73 75 77 79<br><code>#2</code><br>2 5 8 11 14 17 20 23 26 29<br>32 35 38 41 44 47 50 53 56 59<br>62 64 66 68 70 72 74 76 78 80<br>82 84 86 88 90 92 94 96 98 100<br> <code>#3</code><br>3 6 9 12 15 18 21 24 27 30<br>33 36 39 42 45 48 51 54 57 60</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int duei[110],school[100010];
+int main()&#123;
+    int n,code=1;
+    cin&gt;&gt;n;
+    vector&lt;vector&lt;int&gt; &gt;v(n+1);//vector的常用构造函数
+    for(int i=1;i&lt;=n;i++)
+        cin&gt;&gt;duei[i];
+    while(1)&#123;
+        int flag=true;//结束循环条件，座位都安排好 
+        for(int i=1;i&lt;v.size();i++)&#123;//各个学校之间遍历
+            if(v[i].size()&lt;duei[i]*10)&#123;//判断该校学生是否都有座位 
+                flag=false; 
+                if(school[code-1]!=i)&#123;//判断该座位之前学生是否为本校 
+                    v[i].push_back(code);//学生入座 
+                    school[code]=i;//标记该座位    
+                    code++;     
+                &#125;else&#123;
+                    v[i].push_back(code+1);//学生入座 
+                    school[code+1]=i;//标记该座位
+                    code+=2;
+                &#125;
+            &#125;     
+        &#125;
+        if(flag)break;
+    &#125;
+     for(int i=1;i&lt;v.size();i++)&#123;
+        cout&lt;&lt;&quot;#&quot;&lt;&lt;i&lt;&lt;endl;
+        for(int j=0;j&lt;v[i].size();j++)&#123;
+            if(j!=0&amp;&amp;j%10)cout&lt;&lt;&quot; &quot;;
+            if(j!=0&amp;&amp;!(j%10))cout&lt;&lt;endl;
+            cout&lt;&lt;v[i][j];
+        &#125;cout&lt;&lt;endl;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>7-45 谁是赢家 (10分)<br>某电视台的娱乐节目有个表演评审环节，每次安排两位艺人表演，他们的胜负由观众投票和 3 名评委投票两部分共同决定。规则为：如果一位艺人的观众票数高，且得到至少 1 名评委的认可，该艺人就胜出；或艺人的观众票数低，但得到全部评委的认可，也可以胜出。节目保证投票的观众人数为奇数，所以不存在平票的情况。本题就请你用程序判断谁是赢家。</p>
+<p>输入格式：<br>输入第一行给出 2 个不超过 1000 的正整数 Pa 和 Pb，分别是艺人 a 和艺人 b 得到的观众票数。题目保证这两个数字不相等。随后第二行给出 3 名评委的投票结果。数字 0 代表投票给 a，数字 1 代表投票给 b，其间以一个空格分隔。</p>
+<p>输出格式：<br>按以下格式输出赢家：</p>
+<p>The winner is x: P1 + P2<br>其中 x 是代表赢家的字母，P1 是赢家得到的观众票数，P2 是赢家得到的评委票数。</p>
+<p>输入样例：<br>327 129<br>1 0 1<br>输出样例：<br>The winner is a: 327 + 1<br>鸣谢安阳师范学院软件学院李栋同学完善测试数据。</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[1010];
+int main()&#123;
+int a,b,k,cn=0;
+cin&gt;&gt;a&gt;&gt;b;
+for(int i=0;i&lt;3;i++)&#123;
+    cin&gt;&gt;k;
+    if(k)cn++;
+&#125;
+if(a&gt;b&amp;&amp;cn&lt;=2||a&lt;b&amp;&amp;cn==0)cout&lt;&lt;&quot;The winner is &quot;&lt;&lt;&quot;a: &quot;&lt;&lt;a&lt;&lt;&quot; + &quot;&lt;&lt;3-cn;
+else cout&lt;&lt;&quot;The winner is &quot;&lt;&lt;&quot;b: &quot;&lt;&lt;b&lt;&lt;&quot; + &quot;&lt;&lt;cn;
+return 0;
+&#125;
+</code></pre>
+<p>7-46 猜数字 (20分)<br>一群人坐在一起，每人猜一个 100 以内的数，谁的数字最接近大家平均数的一半就赢。本题就要求你找出其中的赢家。</p>
+<p>输入格式：<br>输入在第一行给出一个正整数N（≤10<br>​4<br>​​ ）。随后 N 行，每行给出一个玩家的名字（由不超过8个英文字母组成的字符串）和其猜的正整数（≤ 100）。</p>
+<p>输出格式：<br>在一行中顺序输出：大家平均数的一半（只输出整数部分）、赢家的名字，其间以空格分隔。题目保证赢家是唯一的。</p>
+<p>输入样例：<br>7<br>Bob 35<br>Amy 28<br>James 98<br>Alice 11<br>Jack 45<br>Smith 33<br>Chris 62<br>输出样例：<br>22 Amy</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string a[10010];
+int b[10010],c[10010];
+int main()&#123;
+int n,sum=0;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a[i]&gt;&gt;b[i];
+    sum+=b[i];
+&#125;
+int ave=sum/n/2,win=fabs(ave-b[0]);
+for(int i=0;i&lt;n;i++)&#123;
+    c[i]=fabs(ave-b[i]);
+    if(c[i]&lt;win)win=c[i];
+&#125;
+for(int i=0;i&lt;n;i++)&#123;
+    if(win==c[i])&#123;cout&lt;&lt;ave&lt;&lt;&quot; &quot;&lt;&lt;a[i];&#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-47 猴子吃桃问题 (15分)<br>一只猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个；第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半加一个。到第N天早上想再吃时，见只剩下一个桃子了。问：第一天共摘了多少个桃子？</p>
+<p>输入格式:<br>输入在一行中给出正整数N（1&lt;N≤10）。</p>
+<p>输出格式:<br>在一行中输出第一天共摘了多少个桃子。</p>
+<p>输入样例:<br>3<br>输出样例:<br>10</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n,sum=1;
+cin&gt;&gt;n;
+for(int i=1;i&lt;n;i++)&#123;
+    sum=2*(sum+1);
+&#125;
+cout&lt;&lt;sum;
+return 0;
+&#125;
+</code></pre>
+<p>7-48 黑洞数 (20分)<br>黑洞数也称为陷阱数，又称“Kaprekar问题”，是一类具有奇特转换特性的数。</p>
+<p>任何一个各位数字不全相同的三位数，经有限次“重排求差”操作，总会得到495。最后所得的495即为三位黑洞数。所谓“重排求差”操作即组成该数的数字重排后的最大数减去重排后的最小数。（6174为四位黑洞数。）</p>
+<p>例如，对三位数207：</p>
+<p>第1次重排求差得：720 - 27 ＝ 693；<br>第2次重排求差得：963 - 369 ＝ 594；<br>第3次重排求差得：954 - 459 ＝ 495；<br>以后会停留在495这一黑洞数。如果三位数的3个数字全相同，一次转换后即为0。</p>
+<p>任意输入一个三位数，编程给出重排求差的过程。</p>
+<p>输入格式：<br>输入在一行中给出一个三位数。</p>
+<p>输出格式：<br>按照以下格式输出重排求差的过程：</p>
+<p>序号: 数字重排后的最大数 - 重排后的最小数 = 差值<br>序号从1开始，直到495出现在等号右边为止。</p>
+<p>输入样例：<br>123<br>输出样例：<br>1: 321 - 123 = 198<br>2: 981 - 189 = 792<br>3: 972 - 279 = 693<br>4: 963 - 369 = 594<br>5: 954 - 459 = 495</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int d[3];
+int main()&#123;
+    int n,cn=0,m;
+    cin&gt;&gt;n;
+    do&#123;
+    cn++;
+    d[0]=n/100;
+    d[1]=(n/10)%10;
+    d[2]=n%10;
+    for(int j=0;j&lt;2;j++)&#123;
+        for(int i=0;i&lt;2;i++)&#123;
+            if(d[i]&gt;d[i+1])&#123;int temp=d[i];d[i]=d[i+1];d[i+1]=temp;&#125;        
+    &#125;   &#125;
+        int min,max;
+        min=100*d[0]+10*d[1]+d[2];
+        max=d[0]+10*d[1]+100*d[2];
+        m=max-min;
+    cout&lt;&lt;cn&lt;&lt;&#39;:&#39;&lt;&lt;&quot; &quot;&lt;&lt;max&lt;&lt;&quot; &quot;&lt;&lt;&#39;-&#39;&lt;&lt;&quot; &quot;&lt;&lt;min&lt;&lt;&quot; &quot;&lt;&lt;&#39;=&#39;&lt;&lt;&quot; &quot;&lt;&lt;m&lt;&lt;endl;
+        n=m;
+    &#125;while(n!=495);        
+return 0;
+&#125;
+</code></pre>
+<p>7-49 求整数序列中出现次数最多的数 (15分)<br>本题要求统计一个整型序列中出现次数最多的整数及其出现次数。</p>
+<p>输入格式：<br>输入在一行中给出序列中整数个数N（0&lt;N≤1000），以及N个整数。数字间以空格分隔。</p>
+<p>输出格式：<br>在一行中输出出现次数最多的整数及其出现次数，数字间以空格分隔。题目保证这样的数字是唯一的。</p>
+<p>输入样例：<br>10 3 2 -1 5 3 4 3 0 3 2<br>输出样例：<br>3 4</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[1100],b[1100],c[1100];
+int main()&#123;
+long long int i,n,max=0,maxn;
+cin&gt;&gt;i;
+for(int j=0;j&lt;i;j++)&#123;
+    cin&gt;&gt;b[j];
+    a[j]=b[j];
+&#125;
+for(int j=0;j&lt;i;j++)&#123;
+    for(int k=0;k&lt;i;k++)&#123;
+        if(a[j]==b[k])c[j]++;        
+    &#125;
+    if(max&lt;c[j])&#123;
+    maxn=j;
+    max=c[j];&#125;    
+&#125;
+cout&lt;&lt;a[maxn]&lt;&lt;&quot; &quot;&lt;&lt;max;    
+return 0;    
+&#125;
+</code></pre>
+<p>7-50 装箱问题 (20分)<br>假设有N项物品，大小分别为s<br>​1<br>​​ 、s<br>​2<br>​​ 、…、s<br>​i<br>​​ 、…、s<br>​N<br>​​ ，其中s<br>​i<br>​​ 为满足1≤s<br>​i<br>​​ ≤100的整数。要把这些物品装入到容量为100的一批箱子（序号1-N）中。装箱方法是：对每项物品, 顺序扫描箱子，把该物品放入足以能够容下它的第一个箱子中。请写一个程序模拟这种装箱过程，并输出每个物品所在的箱子序号，以及放置全部物品所需的箱子数目。</p>
+<p>输入格式：<br>输入第一行给出物品个数N（≤1000）；第二行给出N个正整数s<br>​i<br>​​ （1≤s<br>​i<br>​​ ≤100，表示第i项物品的大小）。</p>
+<p>输出格式：<br>按照输入顺序输出每个物品的大小及其所在的箱子序号，每个物品占1行，最后一行输出所需的箱子数目。</p>
+<p>输入样例：<br>8<br>60 70 80 90 30 40 10 20<br>输出样例：<br>60 1<br>70 2<br>80 3<br>90 4<br>30 1<br>40 5<br>10 1<br>20 2<br>5</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int s[1010];
+int main()&#123;
+int n,cn=0,k;
+cin&gt;&gt;n;
+for(int i=1;i&lt;=n;i++)&#123;
+    cin&gt;&gt;s[i];
+    k=s[i];
+    int flag=1;
+    for(int j=1;j&lt;=cn;j++)&#123;
+        if(s[j]+s[i]&lt;=100)&#123;
+            flag=0;
+            s[j]+=s[i];s[i]=0;
+            cout&lt;&lt;k&lt;&lt;&quot; &quot;&lt;&lt;j&lt;&lt;endl;
+            break;
+            
+        &#125;
+    &#125;
+    if(flag)&#123;
+        cn++;
+        int temp=s[cn];
+        s[cn]=s[i];
+        s[i]=temp;
+        cout&lt;&lt;k&lt;&lt;&quot; &quot;&lt;&lt;cn&lt;&lt;endl;    
+    &#125;
+&#125;
+cout&lt;&lt;cn;
+return 0;     
+&#125;
+</code></pre>
+<p>7-51 支票面额 (15分)<br>一个采购员去银行兑换一张y元f分的支票，结果出纳员错给了f元y分。采购员用去了n分之后才发觉有错，于是清点了余额尚有2y元2f分，问该支票面额是多少？</p>
+<p>输入格式：<br>输入在一行中给出小于100的正整数n。</p>
+<p>输出格式：<br>在一行中按格式y.f输出该支票的原始面额。如果无解，则输出No Solution。</p>
+<p>输入样例1：<br>23<br>输出样例1：<br>25.51<br>输入样例2：<br>22<br>输出样例2：<br>No Solution</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[1010];
+int main()&#123;
+int y,f,n,flag=0;
+    cin&gt;&gt;n;
+    for(int y=0;y&lt;100;y++)&#123;
+        for(int f=0;f&lt;100;f++)&#123;
+            if(100*f+y==n+100*2*y+2*f)&#123;cout&lt;&lt;y&lt;&lt;&quot;.&quot;&lt;&lt;f;flag=1;&#125;
+        &#125;
+    &#125;
+    if(flag==0)cout&lt;&lt;&quot;No Solution&quot;;
+return 0;
+&#125;
+</code></pre>
+<p>7-52 正整数A+B (15分)<br>题的目标很简单，就是求两个正整数A和B的和，其中A和B都在区间[1,1000]。稍微有点麻烦的是，输入并不保证是两个正整数。</p>
+<p>输入格式：<br>输入在一行给出A和B，其间以空格分开。问题是A和B不一定是满足要求的正整数，有时候可能是超出范围的数字、负数、带小数点的实数、甚至是一堆乱码。</p>
+<p>注意：我们把输入中出现的第1个空格认为是A和B的分隔。题目保证至少存在一个空格，并且B不是一个空字符串。</p>
+<p>输出格式：<br>如果输入的确是两个正整数，则按格式A + B = 和输出。如果某个输入不合要求，则在相应位置输出?，显然此时和也是?。</p>
+<blockquote>
+<p>输入样例1：<br>123 456<br>输出样例1：<br>123 + 456 = 579<br>输入样例2：<br>22.18<br>输出样例2：<br>? + 18 = ?<br>输入样例3：<br>-100 blabla bla…33<br>输出样例3：<br>? + ? = ?</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char a[1010],b[1010];
+int oj(char a[])&#123;
+    int x=strlen(a),sum=0;
+    if(x&gt;4)return 0;//去位数超1000 
+    else if(a[0]==&#39;-&#39;)return 0;//去负数 
+    for(int i=0;i&lt;x;i++)&#123;
+        if(*(a+i)&gt;=&#39;1&#39;&amp;&amp;*(a+i)&lt;=&#39;9&#39;)sum=10*sum+*(a+i)-&#39;0&#39;;
+        else return 0;//去小数，非法字符 
+    &#125;
+    if(sum&gt;1000||sum&lt;0)return 0;//数字不在[1,1000]内 
+    return sum;//输出正整数 
+&#125;
+int main()&#123;
+    int flag=1;
+    scanf(&quot;%s%s&quot;,a,b);
+    if(oj(a))cout&lt;&lt;oj(a)&lt;&lt;&quot; + &quot;;
+    else cout&lt;&lt;&quot;? + &quot;,flag=0;
+    if(oj(b))cout&lt;&lt;oj(b)&lt;&lt;&quot; = &quot;;
+    else cout&lt;&lt;&quot;? = &quot;,flag=0;
+    if(flag)cout&lt;&lt;oj(a)+oj(b);
+    else cout&lt;&lt;&quot;?&quot;;
+return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2019/12/20 13:42:07<br>部分正确<br>14    7-52    C++ (g++)    4 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>6    4 ms    356 KB<br>1<br>答案正确<br>2    4 ms    424 KB<br>2<br>答案正确<br>2    4 ms    404 KB<br>3<br>答案正确<br>2    4 ms    384 KB<br>4<br>答案错误<br>0    4 ms    440 KB<br>5<br>答案正确<br>1    4 ms    424 KB<br>6<br>答案正确<br>1    4 ms    384 KB</p>
+</blockquote>
+<p>7-53 A-B (20分)<br>本题要求你计算A−B。不过麻烦的是，A和B都是字符串 —— 即从字符串A中把字符串B所包含的字符全删掉，剩下的字符组成的就是字符串A−B。</p>
+<p>输入格式：<br>输入在2行中先后给出字符串A和B。两字符串的长度都不超过10<br>​4<br>​​ ，并且保证每个字符串都是由可见的ASCII码和空白字符组成，最后以换行符结束。</p>
+<p>输出格式：<br>在一行中打印出A−B的结果字符串。</p>
+<blockquote>
+<p>输入样例：<br>I love GPLT!  It’s a fun game!<br>aeiou<br>输出样例：<br>I lv GPLT!  It’s  fn gm!</p>
+</blockquote>
+<p>/*<br>对要删除元素做标记，遇标记则跳过，避免多重循环查找<br>*/<br>    #include&lt;bits/stdc++.h&gt;<br>    using namespace std;<br>    int main(){<br>        string a,b;<br>        getline(cin,a);<br>        getline(cin,b);<br>        int ta=a.size(),tb=b.size();<br>        map&lt;char,int&gt;m;<br>        for(int i=0;i&lt;tb;i++){<br>            m[b[i]]=1;<br>        }<br>        for(int i=0;i&lt;ta;i++){<br>            if(m[a[i]]==1)continue;<br>            printf(“%c”,a[i]);<br>        }<br>        return 0;<br>    } </p>
+<p>7-54 查验身份证 (20分)<br>一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：</p>
+<p>首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值Z；最后按照以下关系对应Z值与校验码M的值：</p>
+<p>Z：0 1 2 3 4 5 6 7 8 9 10<br>M：1 0 X 9 8 7 6 5 4 3 2<br>现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。</p>
+<p>输入格式：<br>输入第一行给出正整数N（≤100）是输入的身份证号码的个数。随后N行，每行给出1个18位身份证号码。</p>
+<p>输出格式：<br>按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出All passed。</p>
+<p>输入样例1：<br>4<br>320124198808240056<br>12010X198901011234<br>110108196711301866<br>37070419881216001X<br>输出样例1：<br>12010X198901011234<br>110108196711301866<br>37070419881216001X<br>输入样例2：<br>2<br>320124198808240056<br>110108196711301862<br>输出样例2：<br>All passed<br>鸣谢阜阳师范学院范建中老师补充数据</p>
+<p>鸣谢浙江工业大学之江学院石洗凡老师纠正数据</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[17]=&#123;7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2&#125;;
+char b[]=&quot;10X98765432&quot;;
+char input[18];
+int main()&#123;
+int n,sum=0,flag=0,flag2=0;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    flag=0;
+    for(int j=0;j&lt;18;j++)&#123;
+        cin&gt;&gt;input[j];
+        if(!(input[j]&gt;=48&amp;&amp;input[j]&lt;=57)&amp;&amp;j&lt;17)&#123;
+        flag=1;
+        flag2=1;
+        &#125;
+        if(j!=17)sum+=(input[j]-&#39;0&#39;)*a[j];        
+    &#125;
+    if(b[sum%11]!=input[17])&#123;flag=1;flag2=1;&#125;
+    sum=0;
+    if(flag)&#123;
+        cout&lt;&lt;input;
+        flag=1;cout&lt;&lt;endl;&#125;
+&#125;
+if(flag2==0)cout&lt;&lt;&quot;All passed&quot;;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-55-最长对称子串-25分"><a href="#7-55-最长对称子串-25分" class="headerlink" title="7-55 最长对称子串 (25分)"></a>7-55 最长对称子串 (25分)</h3><p>对给定的字符串，本题要求你输出最长对称子串的长度。例如，给定Is PAT&amp;TAP symmetric?，最长对称子串为s PAT&amp;TAP s，于是你应该输出11。</p>
+<p>输入格式：<br>输入在一行中给出长度不超过1000的非空字符串。</p>
+<p>输出格式：<br>在一行中输出最长对称子串的长度。</p>
+<blockquote>
+<p>输入样例：<br>Is PAT&amp;TAP symmetric?<br>输出样例：<br>11</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int f[1010][1010];
+int main()&#123;
+string a;
+getline(cin,a);
+int x=a.size(),max=0,cn=0,cn2=0,max2=0,k;
+for(int i=0;i&lt;x;i++)&#123;
+    for(int j=0;j&lt;=i;j++)&#123;
+        if(a[i+j]!=a[i-j])break;
+        cn+=2;
+    &#125;
+    if(cn&gt;max)max=cn;
+    cn=0;
+&#125;
+max--;
+for(int i=0;i&lt;x;i++)&#123;
+    for(int j=0;j&lt;=i;j++)&#123;
+        if(a[i+j+1]!=a[i-j])break;
+        cn2+=2;
+    &#125;
+    if(cn2&gt;max2)max2=cn2;
+    cn2=0;
+&#125;
+max2;
+k=(max&gt;max2)?max:max2;
+
+if(x&lt;2)cout&lt;&lt;1;
+else cout&lt;&lt;k;
+
+return 0;
+&#125;
+</code></pre>
+<p>7-56 整除光棍 (20分)<br>这里所谓的“光棍”，并不是指单身汪啦~ 说的是全部由1组成的数字，比如1、11、111、1111等。传说任何一个光棍都能被一个不以5结尾的奇数整除。比如，111111就可以被13整除。 现在，你的程序要读入一个整数x，这个整数一定是奇数并且不以5结尾。然后，经过计算，输出两个数字：第一个数字s，表示x乘以s是一个光棍，第二个数字n是这个光棍的位数。这样的解当然不是唯一的,题目要求你输出最小的解。</p>
+<p>提示：一个显然的办法是逐渐增加光棍的位数，直到可以整除x为止。但难点在于，s可能是个非常大的数 —— 比如，程序输入31，那么就输出3584229390681和15，因为31乘以3584229390681的结果是111111111111111，一共15个1。</p>
+<p>输入格式：<br>输入在一行中给出一个不以5结尾的正奇数x（&lt;1000）。</p>
+<p>输出格式：<br>在一行中输出相应的最小的s和n，其间以1个空格分隔。</p>
+<p>输入样例：<br>31<br>输出样例：<br>3584229390681 15</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char s[1000];
+int main()&#123;
+int x,i=0,cn=0;
+cin&gt;&gt;x;
+do&#123;
+    i*=10;
+    i+=1;
+    s[cn]=i/x+&#39;0&#39;;
+    i%=x;
+    cn++;
+&#125;while(i!=0);
+for(i=0;s[i]==&#39;0&#39;;i++);
+cout&lt;&lt;(s+i)&lt;&lt;&quot; &quot;&lt;&lt;cn;
+return 0;
+&#125;
+</code></pre>
+<p>7-57 打印沙漏 (20分)<br>本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印</p>
+<pre><code>*****
+ ***
+  *
+ ***
+*****
+</code></pre>
+<p>所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，再从小到大顺序递增；首尾符号数相等。</p>
+<p>给定任意N个符号，不一定能正好组成一个沙漏。要求打印出的沙漏能用掉尽可能多的符号。</p>
+<p>输入格式:<br>输入在一行给出1个正整数N（≤1000）和一个符号，中间以空格分隔。</p>
+<p>输出格式:<br>首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。</p>
+<blockquote>
+<p>输入样例:<br>19 *<br>输出样例:<br>    *****<br>     ***<br>      *<br>     ***<br>    *****<br>2</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n;
+char a;
+cin&gt;&gt;n&gt;&gt;a;
+int k,sum=0,cn=0;
+for(int i=1;;i++)&#123;
+    cn++;
+    k=2*i-1;
+    sum+=k;
+    if((n+1)/2==sum)&#123;break;&#125;
+    if((n+1)/2&lt;=sum)&#123;cn--;sum-=k;k=k-2;break;&#125;
+&#125;
+int j=0;
+for(int i=cn;i&gt;0;i--)&#123;
+    int j1=j,k1=k;
+    while(j1--)cout&lt;&lt;&quot; &quot;;
+    while(k1--)cout&lt;&lt;a;
+    cout&lt;&lt;endl;
+    j++;
+    k-=2;
+&#125;
+    k=3,j=j-2;
+for(int i=cn-1;i&gt;0;i--)&#123;
+    int j1=j,k1=k;
+    while(j1--)cout&lt;&lt;&quot; &quot;;
+    while(k1--)cout&lt;&lt;a;
+    cout&lt;&lt;endl;
+    j--;
+    k+=2;
+&#125;
+cout&lt;&lt;n-(2*sum-1);
+return 0;
+&#125;
+</code></pre>
+<p>7-58 组个最小数 (20分)<br>给定数字0-9各若干个。你可以以任意顺序排列这些数字，但必须全部使用。目标是使得最后得到的数尽可能小（注意0不能做首位）。例如：给定两个0，两个1，三个5，一个8，我们得到的最小的数就是10015558。</p>
+<p>现给定数字，请编写程序输出能够组成的最小的数。</p>
+<p>输入格式：<br>输入在一行中给出10个非负整数，顺序表示我们拥有数字0、数字1、……数字9的个数。整数间用一个空格分隔。10个数字的总个数不超过50，且至少拥有1个非0的数字。</p>
+<p>输出格式：<br>在一行中输出能够组成的最小的数。</p>
+<p>输入样例：<br>2 2 0 0 0 3 0 0 1 0<br>输出样例：<br>10015558</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int b[10];
+int main()&#123;
+int cn=0,a;
+for(int i=0;i&lt;10;i++)&#123;
+    cin&gt;&gt;b[i];
+&#125;
+
+for(int i=1;i&lt;=9;i++)
+if(b[i])&#123;cout&lt;&lt;i;b[i]--;break;&#125;
+for(int i=0;i&lt;=9;i++)&#123;
+    while(b[i]--)cout&lt;&lt;i;
+&#125;
+return 0;
+&#125; 
+</code></pre>
+<p>7-59 出租 (20分)<br>下面是新浪微博上曾经很火的一张图：<br><img src="https://images.ptausercontent.com/187" loading="lazy"></p>
+<p>一时间网上一片求救声，急问这个怎么破。其实这段代码很简单，index数组就是arr数组的下标，index[0]=2 对应 arr[2]=1，index[1]=0 对应 arr[0]=8，index[2]=3 对应 arr[3]=0，以此类推…… 很容易得到电话号码是18013820100。</p>
+<p>本题要求你编写一个程序，为任何一个电话号码生成这段代码 —— 事实上，只要生成最前面两行就可以了，后面内容是不变的。</p>
+<p>输入格式：<br>输入在一行中给出一个由11位数字组成的手机号码。</p>
+<p>输出格式：<br>为输入的号码生成代码的前两行，其中arr中的数字必须按递减顺序给出。</p>
+<p>输入样例：<br>18013820100<br>输出样例：<br>int[] arr = new int[]{8,3,2,1,0};<br>int[] index = new int[]{3,0,4,3,1,0,2,4,3,4,4};</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[11],b[11];
+int main()&#123;
+long long n;
+int i=10,k=0;
+cin&gt;&gt;n;
+while(n)&#123;
+    a[i--]=n%10;
+    n/=10;
+&#125;
+cout&lt;&lt;&quot;int[] arr = new int[]&#123;&quot;;
+for(int j=9;j&gt;=0;j--)&#123;
+for(int i=0;i&lt;11;i++)&#123;
+    if(a[i]==j)&#123;b[k++]=j;break;&#125;    
+&#125;&#125;
+for(int i=0;i&lt;k;i++)&#123;
+    cout&lt;&lt;b[i];
+    if(i!=k-1)cout&lt;&lt;&quot;,&quot;;
+&#125;
+cout&lt;&lt;&quot;&#125;;&quot;&lt;&lt;endl;
+cout&lt;&lt;&quot;int[] index = new int[]&#123;&quot;;
+for(int i=0;i&lt;11;i++)&#123;
+    for(int j=0;j&lt;k;j++)&#123;
+    if(a[i]==b[j])&#123;cout&lt;&lt;j;if(i!=10)cout&lt;&lt;&quot;,&quot;;&#125;
+
+&#125;&#125;
+cout&lt;&lt;&quot;&#125;;&quot;;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-60-情人节-15分"><a href="#7-60-情人节-15分" class="headerlink" title="7-60 情人节 (15分)"></a>7-60 情人节 (15分)</h3><p><img src="https://images.ptausercontent.com/356" loading="lazy"></p>
+<p>以上是朋友圈中一奇葩贴：“2月14情人节了，我决定造福大家。第2个赞和第14个赞的，我介绍你俩认识…………咱三吃饭…你俩请…”。现给出此贴下点赞的朋友名单，请你找出那两位要请客的倒霉蛋。</p>
+<p>输入格式：<br>输入按照点赞的先后顺序给出不知道多少个点赞的人名，每个人名占一行，为不超过10个英文字母的非空单词，以回车结束。一个英文句点.标志输入的结束，这个符号不算在点赞名单里。</p>
+<p>输出格式：<br>根据点赞情况在一行中输出结论：若存在第2个人A和第14个人B，则输出“A and B are inviting you to dinner…”；若只有A没有B，则输出“A is the only one for you…”；若连A都没有，则输出“Momo… No one is for you …”。</p>
+<blockquote>
+<p>输入样例1：<br>GaoXZh<br>Magi<br>Einst<br>Quark<br>LaoLao<br>FatMouse<br>ZhaShen<br>fantacy<br>latesum<br>SenSen<br>QuanQuan<br>whatever<br>whenever<br>Potaty<br>hahaha<br>.<br>输出样例1：<br>Magi and Potaty are inviting you to dinner…<br>输入样例2：<br>LaoLao<br>FatMouse<br>whoever<br>.<br>输出样例2：<br>FatMouse is the only one for you…<br>输入样例3：<br>LaoLao<br>.<br>输出样例3：<br>Momo… No one is for you …</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+string str,A,B;
+int main()&#123;
+int cn=0;
+while(cin&gt;&gt;str)&#123;
+    cn++;
+    if(cn==2)A=str;
+    if(cn==14)B=str;
+&#125;
+if(cn-1&lt;2)cout&lt;&lt;&quot;Momo... No one is for you ...&quot;;
+else if(cn-1&lt;14)cout&lt;&lt;A&lt;&lt;&quot; is the only one for you...&quot;;
+else cout&lt;&lt;A&lt;&lt;&quot; and &quot;&lt;&lt;B&lt;&lt;&quot; are inviting you to dinner...&quot;;
+return 0;     
+&#125;
+</code></pre>
+<p>7-61 古风排版 (20分)<br>中国的古人写文字，是从右向左竖向排版的。本题就请你编写程序，把一段文字按古风排版。</p>
+<p>输入格式：<br>输入在第一行给出一个正整数N（&lt;100），是每一列的字符数。第二行给出一个长度不超过1000的非空字符串，以回车结束。</p>
+<p>输出格式：<br>按古风格式排版给定的字符串，每列N个字符（除了最后一列可能不足N个）。</p>
+<p>输入样例：<br>4<br>This is a test case<br>输出样例：<br>asa T<br>st ih<br>e tsi<br> ce s</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char b[1010][1010];
+int main()&#123;
+int n,m;//n行m列 
+cin&gt;&gt;n;
+getchar();
+string a;
+getline(cin,a);
+int k=a.length();
+m=k/n;
+if(k&gt;n*m)m++;
+int j=0;
+for(int y=m;y&gt;0;y--)&#123;
+    int x=1;
+    while(x&lt;=n)&#123;
+    if(j&gt;=k)&#123;
+    b[x++][y]=&#39; &#39;;continue;&#125;    
+    b[x++][y]=a[j++];
+    
+    &#125;
+&#125;        
+for(int j=1;j&lt;=n;j++)&#123;
+    for(int i=1;i&lt;=m;i++)&#123;
+        cout&lt;&lt;b[j][i];    
+        &#125;if(j!=n)cout&lt;&lt;endl;
+    &#125;
+return 0;
+&#125;
+</code></pre>
+<p>7-62 倒数第N个字符串 (15分)<br>给定一个完全由小写英文字母组成的字符串等差递增序列，该序列中的每个字符串的长度固定为 L，从 L 个 a 开始，以 1 为步长递增。例如当 L 为 3 时，序列为 { aaa, aab, aac, …, aaz, aba, abb, …, abz, …, zzz }。这个序列的倒数第27个字符串就是 zyz。对于任意给定的 L，本题要求你给出对应序列倒数第 N 个字符串。</p>
+<p>输入格式：<br>输入在一行中给出两个正整数 L（2 ≤ L ≤ 6）和 N（≤10<br>​5<br>​​ ）。</p>
+<p>输出格式：<br>在一行中输出对应序列倒数第 N 个字符串。题目保证这个字符串是存在的。</p>
+<p>输入样例：<br>3 7417<br>输出样例：<br>pat</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char a[100100];
+char b[27]=&#123;&#39;0&#39;,&#39;z&#39;,&#39;y&#39;,&#39;x&#39;,&#39;w&#39;,&#39;v&#39;,&#39;u&#39;,&#39;t&#39;,&#39;s&#39;,&#39;r&#39;,&#39;q&#39;,&#39;p&#39;,&#39;o&#39;,&#39;n&#39;,&#39;m&#39;,&#39;l&#39;,&#39;k&#39;,&#39;j&#39;,&#39;i&#39;,&#39;h&#39;,&#39;g&#39;,&#39;f&#39;,&#39;e&#39;,&#39;d&#39;,&#39;c&#39;,&#39;b&#39;,&#39;a&#39;&#125;;
+int main()&#123;
+    int l,n;
+    cin&gt;&gt;l&gt;&gt;n;
+    int t=n,i=0;
+    int s,w=0;
+    while(t)&#123;
+        s=t%26;
+        t/=26;
+        a[i]=b[s+w];
+        w=1;
+        a[i+1]=b[s+w];
+        i++;
+    &#125;
+    if(n%26==0)&#123;
+        int k2,k3;    
+            for(int k2=26;k2&lt;=n;k2*=26)&#123;
+                cout&lt;&lt;&quot;a&quot;;
+            &#125;    
+    return 0;
+    &#125;
+    int k=l-i;
+    while(k--)cout&lt;&lt;&quot;z&quot;;
+    for(int j=i-1;j&gt;=0;j--)&#123;
+        cout&lt;&lt;a[j];
+    &#125;
+
+    return 0;
+&#125; 
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2019/12/17 13:12:10<br>部分正确<br>13    7-62    C++ (g++)    5 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>9    3 ms    424 KB<br>1<br>答案正确<br>1    3 ms    384 KB<br>2<br>答案正确<br>1    5 ms    384 KB<br>3<br>答案正确<br>2    4 ms    512 KB<br>4<br>答案错误<br>0    5 ms    360 KB</p>
+</blockquote>
+<p>7-63 福到了 (15分)<br>“福”字倒着贴，寓意“福到”。不论到底算不算民俗，本题且请你编写程序，把各种汉字倒过来输出。这里要处理的每个汉字是由一个 N × N 的网格组成的，网格中的元素或者为字符 @ 或者为空格。而倒过来的汉字所用的字符由裁判指定。</p>
+<p>输入格式：<br>输入在第一行中给出倒过来的汉字所用的字符、以及网格的规模 N （不超过100的正整数），其间以 1 个空格分隔；随后 N 行，每行给出 N 个字符，或者为 @ 或者为空格。</p>
+<p>输出格式：<br>输出倒置的网格，如样例所示。但是，如果这个字正过来倒过去是一样的，就先输出bu yong dao le，然后再用输入指定的字符将其输出。</p>
+<p>输入样例 1：<br>$ 9<br> @  @@@@@<br>@@@  @@@<br> @   @ @<br>@@@  @@@<br>@@@ @@@@@<br>@@@ @ @ @<br>@@@ @@@@@<br> @  @ @ @<br> @  @@@@@<br>输出样例 1：<br>$$$$$  $<br>$ $ $  $<br>$$$$$ $$$<br>$ $ $ $$$<br>$$$$$ $$$<br> $$$  $$$<br> $ $   $<br> $$$  $$$<br>$$$$$  $<br>输入样例 2：<br>&amp; 3<br>@@@<br> @<br>@@@<br>输出样例 2：<br>bu yong dao le<br>&amp;&amp;&amp;<br> &amp;<br>&amp;&amp;&amp;</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char a[110][110];
+int main()&#123;
+int n,flag=1;
+char b;
+cin&gt;&gt;b&gt;&gt;n;
+getchar();
+        for(int j=0;j&lt;n;j++)&#123;
+            cin.getline(a[j],110);
+        &#125;
+    for(int i=0;i&lt;n;i++)&#123;
+        for(int j=0;j&lt;n;j++)&#123;
+            if(a[i][j]!=a[n-i-1][n-j-1])flag=0;
+        &#125;    
+    &#125;
+    if(flag)cout&lt;&lt;&quot;bu yong dao le&quot;&lt;&lt;endl;        
+    for(int i=0;i&lt;n;i++)&#123;
+        for(int j=0;j&lt;n;j++)&#123;
+            if(a[n-i-1][n-j-1]!=&#39; &#39;)cout&lt;&lt;b;
+            else cout&lt;&lt;&#39; &#39;;
+        &#125;
+    cout&lt;&lt;endl;
+    &#125;    
+return 0;
+&#125;
+</code></pre>
+<p>7-64 素数对猜想 (20分)<br>让我们定义d<br>​n<br>​​ 为：d<br>​n<br>​​ =p<br>​n+1<br>​​ −p<br>​n<br>​​ ，其中p<br>​i<br>​​ 是第i个素数。显然有d<br>​1<br>​​ =1，且对于n&gt;1有d<br>​n<br>​​ 是偶数。“素数对猜想”认为“存在无穷多对相邻且差为2的素数”。</p>
+<p>现给定任意正整数N(&lt;10<br>​5<br>​​ )，请计算不超过N的满足猜想的素数对的个数。</p>
+<p>输入格式:<br>输入在一行给出正整数N。</p>
+<p>输出格式:<br>在一行中输出不超过N的满足猜想的素数对的个数。</p>
+<blockquote>
+<p>输入样例:<br>20<br>输出样例:<br>4</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int oj(int a)&#123;
+    for(int i=2;i&lt;=sqrt(a);i++)&#123;
+        if(a%i==0)return 0;
+    &#125;
+    return 1;
+&#125;
+int main()&#123;
+    int n,cn=0;
+    cin&gt;&gt;n;
+    for(int i=2;i&lt;=n-2;i++)&#123;
+        if(oj(i)&amp;&amp;oj(i+2))&#123;cn++;&#125; 
+    &#125; 
+    cout&lt;&lt;cn;
+return 0;
+&#125;
+</code></pre>
+<p>7-65 螺旋方阵 (20分)<br>所谓“螺旋方阵”，是指对任意给定的N，将1到N×N的数字从左上角第1个格子开始，按顺时针螺旋方向顺序填入N×N的方阵里。本题要求构造这样的螺旋方阵。</p>
+<blockquote>
+<p>输入格式：<br>输入在一行中给出一个正整数N（&lt;10）。</p>
+<p>输出格式：<br>输出N×N的螺旋方阵。每行N个数字，每个数字占3位。</p>
+<p>输入样例：<br>5<br>输出样例：<br>  1  2  3  4  5<br> 16 17 18 19  6<br> 15 24 25 20  7<br> 14 23 22 21  8<br> 13 12 11 10  9</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[10][10]; 
+int main()&#123;
+int n,x,y,cn;
+x=y=cn=1;
+cin&gt;&gt;n;
+a[1][1]=1;
+while(cn&lt;n*n)&#123;
+    while(y&lt;n&amp;&amp;!a[x][y+1])a[x][++y]=++cn;
+    while(x&lt;n&amp;&amp;!a[x+1][y])a[++x][y]=++cn;
+    while(y&gt;1&amp;&amp;!a[x][y-1])a[x][--y]=++cn;
+    while(x&gt;1&amp;&amp;!a[x-1][y])a[--x][y]=++cn;
+&#125;
+for(int i=1;i&lt;=n;i++)&#123;
+    for(int j=1;j&lt;=n;j++)&#123;
+        cout&lt;&lt;setw(3)&lt;&lt;a[i][j];
+    &#125;
+    cout&lt;&lt;endl;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-66-帅到没朋友-20分"><a href="#7-66-帅到没朋友-20分" class="headerlink" title="7-66 帅到没朋友 (20分)"></a>7-66 帅到没朋友 (20分)</h3><p>当芸芸众生忙着在朋友圈中发照片的时候，总有一些人因为太帅而没有朋友。本题就要求你找出那些帅到没有朋友的人。</p>
+<p>输入格式：<br>输入第一行给出一个正整数N（≤100），是已知朋友圈的个数；随后N行，每行首先给出一个正整数K（≤1000），为朋友圈中的人数，然后列出一个朋友圈内的所有人——为方便起见，每人对应一个ID号，为5位数字（从00000到99999），ID间以空格分隔；之后给出一个正整数M（≤10000），为待查询的人数；随后一行中列出M个待查询的ID，以空格分隔。</p>
+<p>注意：没有朋友的人可以是根本没安装“朋友圈”，也可以是只有自己一个人在朋友圈的人。虽然有个别自恋狂会自己把自己反复加进朋友圈，但题目保证所有K超过1的朋友圈里都至少有2个不同的人。</p>
+<p>输出格式：<br>按输入的顺序输出那些帅到没朋友的人。ID间用1个空格分隔，行的首尾不得有多余空格。如果没有人太帅，则输出No one is handsome。</p>
+<p>注意：同一个人可以被查询多次，但只输出一次。</p>
+<blockquote>
+<p>输入样例1：<br>3<br>3 11111 22222 55555<br>2 33333 44444<br>4 55555 66666 99999 77777<br>8<br>55555 44444 10000 88888 22222 11111 23333 88888<br>输出样例1：<br>10000 88888 23333<br>输入样例2：<br>3<br>3 11111 22222 55555<br>2 33333 44444<br>4 55555 66666 99999 77777<br>4<br>55555 44444 22222 11111<br>输出样例2：<br>No one is handsome</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using  namespace std;
+const int NUMBER=10e6;
+int a[NUMBER];
+int main()&#123;
+    int n,m,k;
+    cin&gt;&gt;n;
+    while(n--)&#123;
+        cin&gt;&gt;m;
+        if(m==1)continue;
+        while(m--)&#123;
+            cin&gt;&gt;k;
+            a[k]++;
+        &#125;
+    &#125; 
+    int j,h,flag=0;
+    cin&gt;&gt;j;
+    while(j--)&#123;
+        cin&gt;&gt;h;
+        if(!a[h])&#123;
+            if(flag)cout&lt;&lt;&quot; &quot;;
+            cout.fill(&#39;0&#39;);
+            cout&lt;&lt;setw(5)&lt;&lt;h;
+            flag=a[h]=1;
+        &#125;
+    &#125;
+    if(!flag)cout&lt;&lt;&quot;No one is handsome&quot;;
+    return 0;
+&#125; 
+</code></pre>
+<h3 id="7-67-一帮一-15分"><a href="#7-67-一帮一-15分" class="headerlink" title="7-67 一帮一 (15分)"></a>7-67 一帮一 (15分)</h3><p>“一帮一学习小组”是中小学中常见的学习组织方式，老师把学习成绩靠前的学生跟学习成绩靠后的学生排在一组。本题就请你编写程序帮助老师自动完成这个分配工作，即在得到全班学生的排名后，在当前尚未分组的学生中，将名次最靠前的学生与名次最靠后的异性学生分为一组。</p>
+<p>输入格式：<br>输入第一行给出正偶数N（≤50），即全班学生的人数。此后N行，按照名次从高到低的顺序给出每个学生的性别（0代表女生，1代表男生）和姓名（不超过8个英文字母的非空字符串），其间以1个空格分隔。这里保证本班男女比例是1:1，并且没有并列名次。</p>
+<p>输出格式：<br>每行输出一组两个学生的姓名，其间以1个空格分隔。名次高的学生在前，名次低的学生在后。小组的输出顺序按照前面学生的名次从高到低排列。</p>
+<blockquote>
+<p>输入样例：<br>8<br>0 Amy<br>1 Tom<br>1 Bill<br>0 Cindy<br>0 Maya<br>1 John<br>1 Jack<br>0 Linda<br>输出样例：<br>Amy Jack<br>Tom Linda<br>Bill Maya<br>Cindy John</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[55];
+string b[55];
+int main()&#123;
+int n;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a[i]&gt;&gt;b[i];
+&#125;
+for(int i=0;i&lt;n/2;i++)&#123;
+    for(int j=n-1;j&gt;=n/2;j--)&#123;
+        if(a[i]==0&amp;&amp;a[j]==1&amp;&amp;a[j]!=3||a[i]==1&amp;&amp;a[j]==0&amp;&amp;a[j]!=3)&#123;
+        a[j]=3;
+        cout&lt;&lt;b[i]&lt;&lt;&quot; &quot;&lt;&lt;b[j]&lt;&lt;endl;break;&#125;
+    &#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-68-海盗分赃-25分"><a href="#7-68-海盗分赃-25分" class="headerlink" title="7-68 海盗分赃 (25分)"></a>7-68 海盗分赃 (25分)</h3><p>P 个海盗偷了 D 颗钻石后来到公海分赃，一致同意如下分赃策略：</p>
+<p>首先，P 个海盗通过抽签决定 1 - P 的序号。然后由第 1 号海盗提出一个分配方案（方案应给出每个海盗分得的具体数量），如果能够得到包括 1 号在内的绝对多数（即大于半数）同意，则按照该分配方案执行，否则 1 号将被投入大海喂鲨鱼；而后依次类似地由第 2 号、第 3 号等等海盗提出方案，直到能够获得绝对多数同意的方案出现为止，或者只剩下最后一位海盗，其独占所有钻石。请编写一个程序，给出第 1 号海盗的钻石分配方案中自己分得的钻石数量。</p>
+<p>附带的三个假定：</p>
+<p>“聪明”与“贪婪”假定：每个海盗总能够以本人利益最大化作为行为准则；<br>“人性化”假定：在能够取得尽量多钻石的情况下，海盗不会故意致同伙于死地；<br>“无偏见”假定：海盗之间没有个人恩怨，分给其他海盗钻石的次序以小序号优先为原则。<br>输入格式：<br>输入在一行中给出 2 个正整数 D 和 P（3≤P≤D≤100）。</p>
+<p>输出格式：<br>输出第 1 号海盗的钻石分配方案中自己分得的钻石数量。</p>
+<blockquote>
+<p>输入样例：<br>10 7<br>输出样例：<br>6</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    int p,d;
+    cin&gt;&gt;d&gt;&gt;p;
+    if(p==1)cout&lt;&lt;d;
+    else if(p==2)cout&lt;&lt;0;
+    else if(p==3)cout&lt;&lt;d-1;
+    else cout&lt;&lt;d-p/2-1;
+return 0;
+&#125;
+</code></pre>
+<p>7-69 最大子列和问题 (20分)<br>给定K个整数组成的序列{ N<br>​1<br>​​ , N<br>​2<br>​​ , …, N<br>​K<br>​​  }，“连续子列”被定义为{ N<br>​i<br>​​ , N<br>​i+1<br>​​ , …, N<br>​j<br>​​  }，其中 1≤i≤j≤K。“最大子列和”则被定义为所有连续子列元素的和中最大者。例如给定序列{ -2, 11, -4, 13, -5, -2 }，其连续子列{ 11, -4, 13 }有最大的和20。现要求你编写程序，计算给定整数序列的最大子列和。</p>
+<p>本题旨在测试各种不同的算法在各种数据情况下的表现。各组测试数据特点如下：</p>
+<p>数据1：与样例等价，测试基本正确性；<br>数据2：102个随机整数；<br>数据3：103个随机整数；<br>数据4：104个随机整数；<br>数据5：105个随机整数；<br>输入格式:<br>输入第1行给出正整数K (≤100000)；第2行给出K个整数，其间以空格分隔。</p>
+<p>输出格式:<br>在一行中输出最大子列和。如果序列中所有整数皆为负数，则输出0。</p>
+<blockquote>
+<p>输入样例:<br>6<br>-2 11 -4 13 -5 -2<br>输出样例:<br>20</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[100100];
+int main()&#123;
+    int k,sum=0,sum2=0;
+    cin&gt;&gt;k;
+    for(int i=0;i&lt;k;i++)&#123; 
+        cin&gt;&gt;a[i];
+        sum+=a[i];
+        if(sum&gt;sum2)sum2=sum;
+        if(sum&lt;0)sum=0;    
+    &#125;
+    cout&lt;&lt;sum2; 
+return 0;    
+&#125;
+</code></pre>
+<h3 id="7-70-统计工龄-20分"><a href="#7-70-统计工龄-20分" class="headerlink" title="7-70 统计工龄 (20分)"></a>7-70 统计工龄 (20分)</h3><p>给定公司N名员工的工龄，要求按工龄增序输出每个工龄段有多少员工。</p>
+<p>输入格式:<br>输入首先给出正整数N（≤10<br>​5<br>​​ ），即员工总人数；随后给出N个整数，即每个员工的工龄，范围在[0, 50]。</p>
+<p>输出格式:<br>按工龄的递增顺序输出每个工龄的员工个数，格式为：“工龄:人数”。每项占一行。如果人数为0则不输出该项。</p>
+<blockquote>
+<p>输入样例:<br>8<br>10 2 0 5 7 2 5 2<br>输出样例:<br>0:1<br>2:3<br>5:2<br>7:1<br>10:1</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[100000];
+int b[55];
+int main()&#123;
+int n;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    cin&gt;&gt;a[i];
+    b[a[i]]++;
+&#125;
+for(int i=0;i&lt;=50;i++)&#123;
+    if(b[i]!=0)&#123;cout&lt;&lt;i&lt;&lt;&quot;:&quot;&lt;&lt;b[i]&lt;&lt;endl;&#125;
+&#125;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-71-朋友圈-25分"><a href="#7-71-朋友圈-25分" class="headerlink" title="7-71 朋友圈 (25分)"></a>7-71 朋友圈 (25分)</h3><p>某学校有N个学生，形成M个俱乐部。每个俱乐部里的学生有着一定相似的兴趣爱好，形成一个朋友圈。一个学生可以同时属于若干个不同的俱乐部。根据“我的朋友的朋友也是我的朋友”这个推论可以得出，如果A和B是朋友，且B和C是朋友，则A和C也是朋友。请编写程序计算最大朋友圈中有多少人。</p>
+<p>输入格式:<br>输入的第一行包含两个正整数N（≤30000）和M（≤1000），分别代表学校的学生总数和俱乐部的个数。后面的M行每行按以下格式给出1个俱乐部的信息，其中学生从1~N编号：</p>
+<p>第i个俱乐部的人数Mi（空格）学生1（空格）学生2 … 学生Mi</p>
+<p>输出格式:<br>输出给出一个整数，表示在最大朋友圈中有多少人。</p>
+<blockquote>
+<p>输入样例:<br>7 4<br>3 1 2 3<br>2 1 4<br>3 5 6 7<br>1 6<br>输出样例:<br>4</p>
+</blockquote>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int fa[30300],cn[30300];
+int find(int x)&#123;//反复找父亲结点，直到找到根节点
+//    if(x=fa[x])return x;//
+//    else return fa[x]=find(fa[x]);
+    int a=x;
+    while(x!=fa[x]) 
+        x=fa[x];
+    while(a!=fa[a])&#123;//路径压缩 
+        int z=a;
+        a=fa[a];
+        fa[z]=x;
+    &#125;
+    return x;
+&#125; 
+int main()&#123;
+    ios::sync_with_stdio(false); 
+    cin.tie(0);cout.tie(0);
+    int n,m,k,a,b;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++)&#123;//初始化 
+        fa[i]=i;
+        cn[i]=1; 
+    &#125;
+    while(m--)&#123;
+        cin&gt;&gt;k&gt;&gt;a;
+        for(int i=1;i&lt;k;i++)&#123;// 
+            cin&gt;&gt;b;
+            int faA=find(a);//查找a的根节点 
+            int faB=find(b);//查找b的根节点 
+            if(faA!=faB)fa[faA]=faB,cn[faB]+=cn[faA];//如果不属于同一集合，合并 //
+        &#125;
+    &#125;
+    int max2=0; 
+    for(int i=1;i&lt;n;i++)&#123;
+        max2=max(max2,cn[i]);
+    &#125;
+    cout&lt;&lt;max2;
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-72-模拟EXCEL排序-25分"><a href="#7-72-模拟EXCEL排序-25分" class="headerlink" title="7-72 模拟EXCEL排序 (25分)"></a>7-72 模拟EXCEL排序 (25分)</h3><p>Excel可以对一组纪录按任意指定列排序。现请编写程序实现类似功能。</p>
+<p>输入格式:<br>输入的第一行包含两个正整数N(≤10<br>​5<br>​​ ) 和C，其中N是纪录的条数，C是指定排序的列号。之后有 N行，每行包含一条学生纪录。每条学生纪录由学号（6位数字，保证没有重复的学号）、姓名（不超过8位且不包含空格的字符串）、成绩（[0, 100]内的整数）组成，相邻属性用1个空格隔开。</p>
+<p>输出格式:<br>在N行中输出按要求排序后的结果，即：当C=1时，按学号递增排序；当C=2时，按姓名的非递减字典序排序；当C=3时，按成绩的非递减排序。当若干学生具有相同姓名或者相同成绩时，则按他们的学号递增排序。</p>
+<blockquote>
+<p>输入样例:<br>3 1<br>000007 James 85<br>000010 Amy 90<br>000001 Zoe 60<br>输出样例:<br>000001 Zoe 60<br>000007 James 85<br>000010 Amy 90</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct student&#123;
+    int code,score;
+    string name;
+&#125;stu[100100];
+
+int n,c;
+bool cmp(student a,student b)&#123;
+    if(c==1) return a.code&lt;b.code;
+    else if(c==2) &#123;
+        if(a.name==b.name)return a.code &lt;b.code ;
+        return a.name&lt;b.name;
+    &#125;
+    else &#123;
+        if(a.score==b.score)return a.code &lt;b.code ;
+        return a.score&lt;b.score;
+    &#125; 
+&#125;
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;c;
+    for(int i=0;i&lt;n;i++)
+        cin&gt;&gt;stu[i].code&gt;&gt;stu[i].name&gt;&gt;stu[i].score;
+    sort(stu,stu+n,cmp);        
+    for(int i=0;i&lt;n;i++)
+        cout&lt;&lt;setw(6)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;stu[i].code&lt;&lt;&quot; &quot;&lt;&lt;stu[i].name&lt;&lt;&quot; &quot;&lt;&lt;stu[i].score&lt;&lt;endl;         
+    return 0;
+&#125;
+</code></pre>
+<p>7-73 魔法优惠券 (25分)<br>在火星上有个魔法商店，提供魔法优惠券。每个优惠劵上印有一个整数面值K，表示若你在购买某商品时使用这张优惠劵，可以得到K倍该商品价值的回报！该商店还免费赠送一些有价值的商品，但是如果你在领取免费赠品的时候使用面值为正的优惠劵，则必须倒贴给商店K倍该商品价值的金额…… 但是不要紧，还有面值为负的优惠劵可以用！（真是神奇的火星）</p>
+<p>例如，给定一组优惠劵，面值分别为1、2、4、-1；对应一组商品，价值为火星币M$7、6、-2、-3，其中负的价值表示该商品是免费赠品。我们可以将优惠劵3用在商品1上，得到M$28的回报；优惠劵2用在商品2上，得到M$12的回报；优惠劵4用在商品4上，得到M$3的回报。但是如果一不小心把优惠劵3用在商品4上，你必须倒贴给商店M$12。同样，当你一不小心把优惠劵4用在商品1上，你必须倒贴给商店M$7。</p>
+<p>规定每张优惠券和每件商品都只能最多被使用一次，求你可以得到的最大回报。</p>
+<p>输入格式:<br>输入有两行。第一行首先给出优惠劵的个数N，随后给出N个优惠劵的整数面值。第二行首先给出商品的个数M，随后给出M个商品的整数价值。N和M在[1, 10<br>​6<br>​​ ]之间，所有的数据大小不超过2<br>​30<br>​​ ，数字间以空格分隔。</p>
+<p>输出格式:<br>输出可以得到的最大回报。</p>
+<blockquote>
+<p>输入样例:<br>4 1 2 4 -1<br>4 7 6 -2 -3<br>输出样例:<br>43</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int k1[1001000],k2[1001000],v1[1001000],v2[1001000];
+int main()&#123;
+    int n,m,a,b,cn=0,cn2=0,cn3=0,cn4=0,sum=0;
+    cin&gt;&gt;n;
+    while(n--)&#123;
+        cin&gt;&gt;a;
+        if(a&lt;0)k1[cn++]=a;
+        else k2[cn2++]=a;
+    &#125;
+    cin&gt;&gt;m;
+    while(m--)&#123;
+        cin&gt;&gt;b;
+        if(b&lt;0)v1[cn3++]=b;
+        else v2[cn4++]=b;
+    &#125;
+    sort(k1,k1+cn);//负数从小到大排序 
+    sort(k2,k2+cn2,greater&lt;int&gt;());//正数从大到小排序
+    sort(v1,v1+cn3,less&lt;int&gt;());//负数从小到大排序 
+    sort(v2,v2+cn4,greater&lt;int&gt;());//正数从大到小排序
+    a=min(cn,cn3);
+    b=min(cn2,cn4);
+    for(int i=0;i&lt;a;i++)
+        sum+=k1[i]*v1[i];
+    for(int i=0;i&lt;b;i++)
+        sum+=k2[i]*v2[i];    
+    cout&lt;&lt;sum;        
+    return 0;
+&#125;
+</code></pre>
+<h3 id="7-74-抢红包-25分"><a href="#7-74-抢红包-25分" class="headerlink" title="7-74 抢红包 (25分)"></a>7-74 抢红包 (25分)</h3><p>没有人没抢过红包吧…… 这里给出N个人之间互相发红包、抢红包的记录，请你统计一下他们抢红包的收获。</p>
+<p>输入格式：<br>输入第一行给出一个正整数N（≤10<br>​4<br>​​ ），即参与发红包和抢红包的总人数，则这些人从1到N编号。随后N行，第i行给出编号为i的人发红包的记录，格式如下：</p>
+<p>KN<br>​1<br>​​ P<br>​1<br>​​ ⋯N<br>​K<br>​​ P<br>​K<br>​​ </p>
+<p>其中K（0≤K≤20）是发出去的红包个数，N<br>​i<br>​​ 是抢到红包的人的编号，P<br>​i<br>​​ （&gt;0）是其抢到的红包金额（以分为单位）。注意：对于同一个人发出的红包，每人最多只能抢1次，不能重复抢。</p>
+<p>输出格式：<br>按照收入金额从高到低的递减顺序输出每个人的编号和收入金额（以元为单位，输出小数点后2位）。每个人的信息占一行，两数字间有1个空格。如果收入金额有并列，则按抢到红包的个数递减输出；如果还有并列，则按个人编号递增输出。</p>
+<blockquote>
+<p>输入样例：<br>10<br>3 2 22 10 58 8 125<br>5 1 345 3 211 5 233 7 13 8 101<br>1 7 8800<br>2 1 1000 2 1000<br>2 4 250 10 320<br>6 5 11 9 22 8 33 7 44 10 55 4 2<br>1 3 8800<br>2 1 23 2 123<br>1 8 250<br>4 2 121 4 516 7 112 9 10<br>输出样例：<br>1 11.63<br>2 3.63<br>8 3.63<br>3 2.11<br>7 1.69<br>6 -1.67<br>9 -2.18<br>10 -3.26<br>5 -3.26<br>4 -12.32</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct number&#123;
+    int code,money=0,cn=0;
+&#125;num[10100];
+bool cmp(number a,number b)&#123;
+    if(a.money==b.money&amp;&amp;a.cn==b.cn)return a.code&lt;b.code;
+    else if(a.money==b.money)return a.cn&gt;b.cn;
+    else return a.money&gt;b.money;
+&#125;
+int main()&#123;
+    int n,k,a,b;
+    cin&gt;&gt;n; 
+    for(int i=1;i&lt;=n;i++)&#123;
+        num[i].code=i;
+        cin&gt;&gt;k;
+        while(k--)&#123;
+            cin&gt;&gt;a&gt;&gt;b;
+            num[a].money+=b;
+            num[i].money-=b;
+            num[a].cn++;
+        &#125;
+    &#125;
+    sort(num+1,num+n+1,cmp);
+    for(int i=1;i&lt;=n;i++)&#123;
+        cout&lt;&lt;num[i].code&lt;&lt;&quot; &quot;&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;num[i].money*0.01&lt;&lt;endl;
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<h3 id="7-75-阅览室-20分"><a href="#7-75-阅览室-20分" class="headerlink" title="7-75 阅览室 (20分)"></a>7-75 阅览室 (20分)</h3><p>天梯图书阅览室请你编写一个简单的图书借阅统计程序。当读者借书时，管理员输入书号并按下S键，程序开始计时；当读者还书时，管理员输入书号并按下E键，程序结束计时。书号为不超过1000的正整数。当管理员将0作为书号输入时，表示一天工作结束，你的程序应输出当天的读者借书次数和平均阅读时间。</p>
+<p>注意：由于线路偶尔会有故障，可能出现不完整的纪录，即只有S没有E，或者只有E没有S的纪录，系统应能自动忽略这种无效纪录。另外，题目保证书号是书的唯一标识，同一本书在任何时间区间内只可能被一位读者借阅。</p>
+<p>输入格式：<br>输入在第一行给出一个正整数N（≤10），随后给出N天的纪录。每天的纪录由若干次借阅操作组成，每次操作占一行，格式为：</p>
+<p>书号（[1, 1000]内的整数） 键值（S或E） 发生时间（hh:mm，其中hh是[0,23]内的整数，mm是[0, 59]内整数）</p>
+<p>每一天的纪录保证按时间递增的顺序给出。</p>
+<p>输出格式：<br>对每天的纪录，在一行中输出当天的读者借书次数和平均阅读时间（以分钟为单位的精确到个位的整数时间）。</p>
+<blockquote>
+<p>输入样例：<br>3<br>1 S 08:10<br>2 S 08:35<br>1 E 10:00<br>2 E 13:16<br>0 S 17:00<br>0 S 17:00<br>3 E 08:10<br>1 S 08:20<br>2 S 09:00<br>1 E 09:20<br>0 E 17:00<br>输出样例：<br>2 196<br>0 0<br>1 60</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int isborr[1010],startime[1010];
+int main()&#123;
+    int id,h,m,cn=0,sum=0,n;
+    char type,temp;
+    cin&gt;&gt;n;
+    for(int day=0;day&lt;n;)&#123;
+        cin&gt;&gt;id&gt;&gt;type&gt;&gt;h&gt;&gt;temp&gt;&gt;m;
+        if(!id)&#123;
+            if(!cn)cout&lt;&lt;&quot;0 0&quot;&lt;&lt;endl;
+            else cout&lt;&lt;cn&lt;&lt;&quot; &quot;&lt;&lt;fixed&lt;&lt;setprecision(0)&lt;&lt;1.0*sum/cn&lt;&lt;endl;
+            day++;
+            cn=sum=0;
+            memset(isborr,0,sizeof(isborr));
+        &#125;else if(type==&#39;S&#39;)&#123;
+            isborr[id]=1;
+            startime[id]=h*60+m;
+        &#125;else if(type==&#39;E&#39;&amp;&amp;isborr[id]==1)&#123;
+            isborr[id]=0;
+            sum+=h*60+m-startime[id];
+            cn++;
+        &#125;
+    &#125;
+return 0;    
+&#125;
+</code></pre>
+<h3 id="7-77-敲笨钟-20分"><a href="#7-77-敲笨钟-20分" class="headerlink" title="7-77 敲笨钟 (20分)"></a>7-77 敲笨钟 (20分)</h3><p>微博上有个自称“大笨钟V”的家伙，每天敲钟催促码农们爱惜身体早点睡觉。为了增加敲钟的趣味性，还会糟改几句古诗词。其糟改的方法为：去网上搜寻压“ong”韵的古诗词，把句尾的三个字换成“敲笨钟”。例如唐代诗人李贺有名句曰：“寻章摘句老雕虫，晓月当帘挂玉弓”，其中“虫”（chong）和“弓”（gong）都压了“ong”韵。于是这句诗就被糟改为“寻章摘句老雕虫，晓月当帘敲笨钟”。</p>
+<p>现在给你一大堆古诗词句，要求你写个程序自动将压“ong”韵的句子糟改成“敲笨钟”。</p>
+<p>输入格式：<br>输入首先在第一行给出一个不超过 20 的正整数 N。随后 N 行，每行用汉语拼音给出一句古诗词，分上下两半句，用逗号 , 分隔，句号 . 结尾。相邻两字的拼音之间用一个空格分隔。题目保证每个字的拼音不超过 6 个字符，每行字符的总长度不超过 100，并且下半句诗至少有 3 个字。</p>
+<p>输出格式：<br>对每一行诗句，判断其是否压“ong”韵。即上下两句末尾的字都是“ong”结尾。如果是压此韵的，就按题面方法糟改之后输出，输出格式同输入；否则输出 Skipped，即跳过此句。</p>
+<blockquote>
+<p>输入样例：<br>5<br>xun zhang zhai ju lao diao chong, xiao yue dang lian gua yu gong.<br>tian sheng wo cai bi you yong, qian jin san jin huan fu lai.<br>xue zhui rou zhi leng wei rong, an xiao chen jing shu wei long.<br>zuo ye xing chen zuo ye feng, hua lou xi pan gui tang dong.<br>ren xian gui hua luo, ye jing chun shan kong.<br>输出样例：<br>xun zhang zhai ju lao diao chong, xiao yue dang lian qiao ben zhong.<br>Skipped<br>xue zhui rou zhi leng wei rong, an xiao chen jing qiao ben zhong.<br>Skipped<br>Skipped</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char b[3]=&#123;&#39;o&#39;,&#39;n&#39;,&#39;g&#39;&#125;;
+int main()&#123;
+int n,flag=0,cn=0,cn2=0;
+string a,b=&quot;,&quot;,c=&quot;.&quot;,d=&quot;qiao ben zhong.&quot;;
+cin&gt;&gt;n;
+getchar();
+for(int i=0;i&lt;n;i++)&#123;
+    int flag1=0;
+getline(cin,a);
+/*      for(int j=0;j&lt;a.size();j++)
+  &#123;
+      if(a[j]==&#39;,&#39;&amp;&amp;a[j-1]==&#39;g&#39;&amp;&amp;a[j-2]==&#39;n&#39;&amp;&amp;a[j-3]==&#39;o&#39;)
+      flag=1;
+      if(a[j]==&#39;.&#39;&amp;&amp;a[j-1]==&#39;g&#39;&amp;&amp;a[j-2]==&#39;n&#39;&amp;&amp;a[j-3]==&#39;o&#39;)
+      flag1=1;
+  &#125;*/
+  int j;
+    int it=a.find(b);
+        if(a[it-3]!=&#39;o&#39;)flag=1;
+        if(a[it-2]!=&#39;n&#39;)flag=1;
+        if(a[it-1]!=&#39;g&#39;)flag=1;
+        it=a.find(c);
+        if(a[it-3]!=&#39;o&#39;)flag=1;
+        if(a[it-2]!=&#39;n&#39;)flag=1;
+        if(a[it-1]!=&#39;g&#39;)flag=1;
+    if(!flag) &#123;
+        for(j=a.size()-1;j&gt;=0;j--)&#123;
+            cn2++;
+            if(a[j]==&#39; &#39;)cn++;
+            if(cn==3)break;
+        &#125;
+        a.replace(j+1,cn2,d);
+        cout&lt;&lt;a&lt;&lt;endl;
+        cn=0,cn2=0;
+    &#125;
+    else cout&lt;&lt;&quot;Skipped&quot;&lt;&lt;endl;
+    flag=0;
+&#125;
+
+        
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-78-估值一亿的AI核心代码-20分"><a href="#7-78-估值一亿的AI核心代码-20分" class="headerlink" title="7-78 估值一亿的AI核心代码 (20分)"></a>7-78 估值一亿的AI核心代码 (20分)</h3><p>AI.jpg</p>
+<p>以上图片来自新浪微博。</p>
+<p>本题要求你实现一个稍微更值钱一点的 AI 英文问答程序，规则是：</p>
+<p>无论用户说什么，首先把对方说的话在一行中原样打印出来；<br>消除原文中多余空格：把相邻单词间的多个空格换成 1 个空格，把行首尾的空格全部删掉，把标点符号前面的空格删掉；<br>把原文中所有大写英文字母变成小写，除了 I；<br>把原文中所有独立的 can you、could you 对应地换成 I can、I could—— 这里“独立”是指被空格或标点符号分隔开的单词；<br>把原文中所有独立的 I 和 me 换成 you；<br>把原文中所有的问号 ? 换成惊叹号 !；<br>在一行中输出替换后的句子作为 AI 的回答。<br>输入格式：<br>输入首先在第一行给出不超过 10 的正整数 N，随后 N 行，每行给出一句不超过 1000 个字符的、以回车结尾的用户的对话，对话为非空字符串，仅包括字母、数字、空格、可见的半角标点符号。</p>
+<p>输出格式：<br>按题面要求输出，每个 AI 的回答前要加上 AI: 和一个空格。</p>
+<blockquote>
+<p>输入样例：<br>6<br>Hello ?<br> Good to chat   with you<br>can   you speak Chinese?<br>Really?<br>Could you show me 5<br>What Is this prime? I,don ‘t know<br>输出样例：<br>Hello ?<br>AI: hello!<br> Good to chat   with you<br>AI: good to chat with you<br>can   you speak Chinese?<br>AI: I can speak chinese!<br>Really?<br>AI: really!<br>Could you show me 5<br>AI: I could show you 5<br>What Is this prime? I,don ‘t know<br>AI: what Is this prime! you,don’t know</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+    string qus,ans;
+    int n;
+    cin&gt;&gt;n;
+    getchar();
+    for(int i=0;i&lt;n;i++)&#123;
+        getline(cin,qus);
+        cout&lt;&lt;qus&lt;&lt;endl;
+        cout&lt;&lt;&quot;AI: &quot;; 
+        ans=qus;
+        int z=ans.length();
+        int cn=0;
+        for(int j=0;j&lt;z;j++)&#123;//删除首空格 
+            if(ans[j]!=&#39; &#39;)cn++;
+            while(ans[j]==&#39; &#39;&amp;&amp;cn==0)ans.erase(j,1);
+            if(ans[j]!=&#39;I&#39;)ans[j]=tolower(ans[j]);//大写转小写 
+        &#125;cn=0;
+        for(int j=z-1;j&gt;=0;j--)&#123;//删除尾空格 
+            if(ans[j]!=&#39; &#39;)cn++;
+            while(ans[j]==&#39; &#39;&amp;&amp;cn==0)ans.erase(j,1),z--;    
+        &#125;
+        for(int j=0;j&lt;z-1;j++)&#123;//删除中空格 
+            if(ans[j]==&#39; &#39;&amp;&amp;ans[j+1]==&#39; &#39;)ans.erase(j,1),j--,z--;
+            if(ans[j]==&#39; &#39;&amp;&amp;(ans[j+1]&lt;48||ans[j+1]&gt;57&amp;&amp;ans[j+1]&lt;65))ans.erase(j,1),z--;
+        &#125;
+        for(int j=1;j&lt;z;j++)&#123;//置换you me 
+            if(ans[j]==&#39;I&#39;&amp;&amp;ans[j+1]&lt;97&amp;&amp;ans[j-1]&lt;97)ans.replace(j,1,&quot;you&quot;); 
+            if(ans[j]==&#39;m&#39;&amp;&amp;ans[j+1]==&#39;e&#39;&amp;&amp;ans[j+2]&lt;97&amp;&amp;ans[j-1]&lt;97)ans.replace(ans.find(&quot;me&quot;),2,&quot;you&quot;);
+        &#125;
+           for(int k=0;k&lt;10;k++)&#123;//置换could you
+               if(ans.find(&quot;could you&quot;)!=string::npos)&#123;
+                   int it=ans.find(&quot;could you&quot;);
+                   if(it==0&amp;&amp;ans[it+9]&lt;65)&#123;
+                       ans.replace(ans.find(&quot;could you&quot;),9,&quot;I could&quot;);
+                   &#125;
+                if(it!=0&amp;&amp;ans[it-1]&lt;65&amp;&amp;ans[it+9]&lt;65)&#123;
+                       ans.replace(ans.find(&quot;could you&quot;),9,&quot;I could&quot;);
+               &#125; 
+           &#125;
+        &#125;
+           for(int k=0;k&lt;10;k++)&#123;//置换 can you        
+            if(ans.find(&quot;can you&quot;)!=string::npos)&#123;
+                int it=ans.find(&quot;can you&quot;);
+                if(it==0&amp;&amp;ans[it+7]&lt;65)&#123;
+                    ans.replace(ans.find(&quot;can you&quot;),7,&quot;I can&quot;);
+                &#125;
+                if(it!=0&amp;&amp;ans[it-1]&lt;65&amp;&amp;ans[it+7]&lt;65)&#123;
+                    ans.replace(ans.find(&quot;can you&quot;),7,&quot;I can&quot;);
+                &#125;
+            &#125;
+        &#125;
+        if(ans.find(&quot;?&quot;)!=string::npos)ans.replace(ans.find(&quot;?&quot;),1,&quot;!&quot;);
+        cout&lt;&lt;ans;//输出
+        if(i!=n-1)cout&lt;&lt;endl;        
+        &#125;
+    return 0;    
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/01/06 20:42:12<br>部分正确<br>11    7-78    C++ (g++)    4 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>10    3 ms    512 KB<br>1<br>答案错误<br>0    3 ms    384 KB<br>2<br>答案错误<br>0    3 ms    384 KB<br>3<br>答案错误<br>0    3 ms    424 KB<br>4<br>答案错误<br>0    4 ms    384 KB<br>5<br>答案正确<br>1    3 ms    384 KB</p>
+</blockquote>
+<h3 id="7-79-特立独行的幸福-25分"><a href="#7-79-特立独行的幸福-25分" class="headerlink" title="7-79 特立独行的幸福 (25分)"></a>7-79 特立独行的幸福 (25分)</h3><p>对一个十进制数的各位数字做一次平方和，称作一次迭代。如果一个十进制数能通过若干次迭代得到 1，就称该数为幸福数。1 是一个幸福数。此外，例如 19 经过 1 次迭代得到 82，2 次迭代后得到 68，3 次迭代后得到 100，最后得到 1。则 19 就是幸福数。显然，在一个幸福数迭代到 1 的过程中经过的数字都是幸福数，它们的幸福是依附于初始数字的。例如 82、68、100 的幸福是依附于 19 的。而一个特立独行的幸福数，是在一个有限的区间内不依附于任何其它数字的；其独立性就是依附于它的的幸福数的个数。如果这个数还是个素数，则其独立性加倍。例如 19 在区间[1, 100] 内就是一个特立独行的幸福数，其独立性为 2×4=8。</p>
+<p>另一方面，如果一个大于1的数字经过数次迭代后进入了死循环，那这个数就不幸福。例如 29 迭代得到 85、89、145、42、20、4、16、37、58、89、…… 可见 89 到 58 形成了死循环，所以 29 就不幸福。</p>
+<p>本题就要求你编写程序，列出给定区间内的所有特立独行的幸福数和它的独立性。</p>
+<p>输入格式：<br>输入在第一行给出闭区间的两个端点：1&lt;A&lt;B≤10<br>​4<br>​​ 。</p>
+<p>输出格式：<br>按递增顺序列出给定闭区间 [A,B] 内的所有特立独行的幸福数和它的独立性。每对数字占一行，数字间以 1 个空格分隔。</p>
+<p>如果区间内没有幸福数，则在一行中输出 SAD。</p>
+<blockquote>
+<p>输入样例 1：<br>10 40<br>输出样例 1：<br>19 8<br>23 6<br>28 3<br>31 4<br>32 3<br>注意：样例中，10、13 也都是幸福数，但它们分别依附于其他数字（如 23、31 等等），所以不输出。其它数字虽然其实也依附于其它幸福数，但因为那些数字不在给定区间 [10, 40] 内，所以它们在给定区间内是特立独行的幸福数。</p>
+<p>输入样例 2：<br>110 120<br>输出样例 2：<br>SAD</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int isprime(int n)&#123; 
+    if(n&lt;=1)return 1;
+    int sqr=(int)sqrt(1.0*n);
+    for(int i=2;i&lt;=sqr;i++)&#123; 
+        if(n%i==0)return 1;
+    &#125; 
+    return 2;
+&#125; 
+struct node&#123; 
+    int num,degree;
+&#125;;
+vector&lt;node&gt;ans;
+map&lt;int,int&gt;m2;
+int main()&#123; 
+    int l,r;
+    cin&gt;&gt;l&gt;&gt;r;
+    for(int i=r;i&gt;=l;i--)&#123; 
+        int t=i,sum=t,tt=t,cn=0;
+        vector&lt;int&gt;v[10010];
+        map&lt;int,int&gt;m;//每个平方和，及其出现次数 
+        while(sum!=1)&#123;//若干次迭代得到 1
+            t=sum;
+            sum=0;
+            while(t)&#123;//做一次平方和
+            int    k=t%10;
+                sum+=k*k;
+                t/=10; 
+            &#125;    
+            cn++;//独立性就是依附于它的的幸福数的个数
+            m[sum]++;
+            if(m[sum]==2)break;
+        &#125; 
+        if(sum==1)&#123; //检验幸福数
+            if(m2[tt]==1)continue;//检验独立性
+            ans.push_back(&#123;tt,cn*isprime(tt)&#125;);
+            for(map&lt;int,int&gt;::iterator it=m.begin();it!=m.end();it++)&#123;
+                m2[it-&gt;first]=it-&gt;second;
+            &#125;
+        &#125; 
+    &#125;     
+    int z=ans.size();
+    if(!z)cout&lt;&lt;&quot;SAD&quot;; 
+    else&#123; 
+        for(int i=z-1;i&gt;=0;i--)&#123; 
+            cout&lt;&lt;ans[i].num&lt;&lt;&quot; &quot;&lt;&lt;ans[i].degree&lt;&lt;endl;
+        &#125; 
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/02/25 20:15:43<br>部分正确<br>22    7-79    C++ (g++)    275 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>12    6 ms    684 KB<br>1<br>答案正确<br>1    5 ms    624 KB<br>2<br>答案正确<br>1    5 ms    680 KB<br>3<br>答案正确<br>2    5 ms    680 KB<br>4<br>答案错误<br>0    7 ms    628 KB<br>5<br>答案正确<br>6    275 ms    640 KB</p>
+</blockquote>
+<h3 id="7-80-Wifi密码-15分"><a href="#7-80-Wifi密码-15分" class="headerlink" title="7-80 Wifi密码 (15分)"></a>7-80 Wifi密码 (15分)</h3><p>下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。</p>
+<p>wifi.jpg</p>
+<p>输入格式：<br>输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行按照 编号-答案 的格式给出一道题的 4 个选项，T 表示正确选项，F 表示错误选项。选项间用空格分隔。</p>
+<p>输出格式：<br>在一行中输出 wifi 密码。</p>
+<blockquote>
+<p>输入样例：<br>8<br>A-T B-F C-F D-F<br>C-T B-F A-F D-F<br>A-F D-F C-F B-T<br>B-T A-F C-F D-F<br>B-F D-T A-F C-F<br>A-T C-F B-F D-F<br>D-T B-F C-F A-F<br>C-T A-F B-F D-F<br>输出样例：<br>13224143</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+int n;
+char a,b,c;
+cin&gt;&gt;n;
+for(int i=0;i&lt;n;i++)&#123;
+    for(int j=0;j&lt;4;j++)&#123;
+        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
+        if(c==&#39;T&#39;)&#123;
+            if(a==&#39;A&#39;)cout&lt;&lt;1;
+            else if(a==&#39;B&#39;)cout&lt;&lt;2;
+            else if(a==&#39;C&#39;)cout&lt;&lt;3;
+            else cout&lt;&lt;4;
+        &#125; 
+    &#125;
+&#125;        
+return 0;
+&#125;
+</code></pre>
+<h3 id="7-81-月饼-25分"><a href="#7-81-月饼-25分" class="headerlink" title="7-81 月饼 (25分)"></a>7-81 月饼 (25分)</h3><p>月饼是中国人在中秋佳节时吃的一种传统食品，不同地区有许多不同风味的月饼。现给定所有种类月饼的库存量、总售价、以及市场的最大需求量，请你计算可以获得的最大收益是多少。</p>
+<p>注意：销售时允许取出一部分库存。样例给出的情形是这样的：假如我们有 3 种月饼，其库存量分别为 18、15、10 万吨，总售价分别为 75、72、45 亿元。如果市场的最大需求量只有 20 万吨，那么我们最大收益策略应该是卖出全部 15 万吨第 2 种月饼、以及 5 万吨第 3 种月饼，获得 72 + 45/2 = 94.5（亿元）。</p>
+<p>输入格式：<br>每个输入包含一个测试用例。每个测试用例先给出一个不超过 1000 的正整数 N 表示月饼的种类数、以及不超过 500（以万吨为单位）的正整数 D 表示市场最大需求量。随后一行给出 N 个正数表示每种月饼的库存量（以万吨为单位）；最后一行给出 N 个正数表示每种月饼的总售价（以亿元为单位）。数字间以空格分隔。</p>
+<p>输出格式：<br>对每组测试用例，在一行中输出最大收益，以亿元为单位并精确到小数点后 2 位。</p>
+<blockquote>
+<p>输入样例：<br>3 20<br>18 15 10<br>75 72 45<br>输出样例：<br>94.50</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct mooncake&#123;
+    double store,sell,price;
+&#125;cake[1010]; 
+bool cmp(mooncake a,mooncake b)&#123;
+    return a.price&gt;b.price; 
+&#125;
+int main()&#123;
+    int n;
+    double d;
+    cin&gt;&gt;n&gt;&gt;d; 
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;cake[i].store;
+    &#125;
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;cake[i].sell;
+        cake[i].price =cake[i].sell/cake[i].store;
+    &#125;
+    sort(cake,cake+n,cmp);
+    double ans;
+    for(int i=0;i&lt;n;i++)&#123;
+        if(cake[i].store&lt;=d)&#123;
+            d-=cake[i].store;
+            ans+=cake[i].sell;
+        &#125;else&#123;
+            ans+=cake[i].price*d;
+            break;
+        &#125;
+    &#125;
+    cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;ans;
+&#125;
+</code></pre>
+<h3 id="7-82-深入虎穴-25分"><a href="#7-82-深入虎穴-25分" class="headerlink" title="7-82 深入虎穴 (25分)"></a>7-82 深入虎穴 (25分)</h3><p>著名的王牌间谍 007 需要执行一次任务，获取敌方的机密情报。已知情报藏在一个地下迷宫里，迷宫只有一个入口，里面有很多条通路，每条路通向一扇门。每一扇门背后或者是一个房间，或者又有很多条路，同样是每条路通向一扇门…… 他的手里有一张表格，是其他间谍帮他收集到的情报，他们记下了每扇门的编号，以及这扇门背后的每一条通路所到达的门的编号。007 发现不存在两条路通向同一扇门。</p>
+<p>内线告诉他，情报就藏在迷宫的最深处。但是这个迷宫太大了，他需要你的帮助 —— 请编程帮他找出距离入口最远的那扇门。</p>
+<p>输入格式：<br>输入首先在一行中给出正整数 N（&lt;10<br>​5<br>​​ ），是门的数量。最后 N 行，第 i 行（1≤i≤N）按以下格式描述编号为 i 的那扇门背后能通向的门：</p>
+<p>K D[1] D[2] … D[K]<br>其中 K 是通道的数量，其后是每扇门的编号。</p>
+<p>输出格式：<br>在一行中输出距离入口最远的那扇门的编号。题目保证这样的结果是唯一的。</p>
+<blockquote>
+<p>输入样例：<br>13<br>3 2 3 4<br>2 5 6<br>1 7<br>1 8<br>1 9<br>0<br>2 11 10<br>1 13<br>0<br>0<br>1 12<br>0<br>0<br>输出样例：<br>12</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+vector&lt;int&gt;v[100100];//10^5的门后所通向的门 
+int d[100100];//该点的度（10^5的门）
+void bfs(int i)&#123;//广搜模板 
+    queue&lt;int&gt;q;//1.定义队列q并将起点入队    
+    q.push(i); 
+    int j;
+    while(q.size())&#123;//2.一个while循环，条件为q非空 
+        j=q.front();//3.先取出队首元素top，然后访问它 ，访问后将其出队 
+        q.pop();
+        for(int k=0;k&lt;v[j].size();k++)&#123;//4.将top的下一层节点中未曾入队的节点入队 
+        q.push(v[j][k]);
+        &#125; 
+    &#125;
+    cout&lt;&lt;j;
+&#125;
+int main()&#123;
+    int n,k,t;
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++)&#123;
+        cin&gt;&gt;k;
+        while(k--)&#123;
+            cin&gt;&gt;t;
+            d[t]++;//(都有父结点)
+            v[i].push_back(t);
+        &#125;
+    &#125;
+    for(int i=1;i&lt;=n;i++)&#123;//找度为0的点作为入口 
+        if(!d[i])&#123;k=i;break;&#125;
+    &#125;
+    bfs(k);
+    return 0;
+&#125;
+</code></pre>
+<h3 id="7-83-家庭房产-25分"><a href="#7-83-家庭房产-25分" class="headerlink" title="7-83 家庭房产 (25分)"></a>7-83 家庭房产 (25分)</h3><p>给定每个人的家庭成员和其自己名下的房产，请你统计出每个家庭的人口数、人均房产面积及房产套数。</p>
+<p>输入格式：<br>输入第一行给出一个正整数N（≤1000），随后N行，每行按下列格式给出一个人的房产：</p>
+<p>编号 父 母 k 孩子1 … 孩子k 房产套数 总面积<br>其中编号是每个人独有的一个4位数的编号；父和母分别是该编号对应的这个人的父母的编号（如果已经过世，则显示-1）；k（0≤k≤5）是该人的子女的个数；孩子i是其子女的编号。</p>
+<p>输出格式：<br>首先在第一行输出家庭个数（所有有亲属关系的人都属于同一个家庭）。随后按下列格式输出每个家庭的信息：</p>
+<p>家庭成员的最小编号 家庭人口数 人均房产套数 人均房产面积<br>其中人均值要求保留小数点后3位。家庭信息首先按人均面积降序输出，若有并列，则按成员编号的升序输出。</p>
+<blockquote>
+<p>输入样例：<br>10<br>6666 5551 5552 1 7777 1 100<br>1234 5678 9012 1 0002 2 300<br>8888 -1 -1 0 1 1000<br>2468 0001 0004 1 2222 1 500<br>7777 6666 -1 0 2 300<br>3721 -1 -1 1 2333 2 150<br>9012 -1 -1 3 1236 1235 1234 1 100<br>1235 5678 9012 0 1 50<br>2222 1236 2468 2 6661 6662 1 300<br>2333 -1 3721 3 6661 6662 6663 1 100<br>输出样例：<br>3<br>8888 1 1.000 1000.000<br>0001 15 0.600 100.000<br>5551 4 0.750 100.000</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int fa[100100];
+struct node&#123;//个人信息 
+    int id,house,area;
+&#125;;
+struct ans&#123;//输出结果 
+    int id,cn;
+    double ave_house,ave_area;
+&#125;; 
+bool cmp(ans &amp;a,ans &amp;b)&#123;
+    if(a.ave_area==b.ave_area)return a.id&lt;b.id;
+    else return a.ave_area&gt;b.ave_area; 
+&#125;
+void init()&#123;
+    for(int i=0;i&lt;=100100;i++)
+        fa[i]=i;
+&#125; 
+int find(int x)&#123;
+    if(x==fa[x])return x;
+    else return fa[x]=find(fa[x]);
+&#125;
+void merge(int a,int b)&#123;
+    int faA=find(a);
+    int faB=find(b);
+    if(faA!=faB)&#123;
+        fa[faA]=faB;
+    &#125;
+&#125;
+int main()&#123;
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0); 
+    int n,id,p1,p2,k,id1,house,area;
+    cin&gt;&gt;n;
+    init();
+    set&lt;int&gt;s1;//保存所有人编号 
+    map&lt;int,node&gt;m1;//保存当前编号，基本信息 
+    while(n--)&#123; 
+        cin&gt;&gt;id&gt;&gt;p1&gt;&gt;p2&gt;&gt;k;
+        s1.insert(id);//
+        if(p1!=-1)&#123; 
+            s1.insert(p1);//
+            merge(id,p1);
+        &#125;  
+        if(p2!=-1)&#123; 
+            s1.insert(p2);//
+            merge(id,p2);
+        &#125; 
+        while(k--)&#123; 
+            cin&gt;&gt;id1;
+            s1.insert(id1);//
+            merge(id,id1);
+        &#125; 
+        cin&gt;&gt;house&gt;&gt;area;
+        m1[id]=node&#123;id,house,area&#125;;//
+    &#125; 
+    set&lt;int&gt;s2;//所有家庭的根编号 
+    map&lt;int,vector&lt;int&gt; &gt;m2;//所有家庭根编号，子编号; 
+    for(set&lt;int&gt;::iterator it=s1.begin();it!=s1.end();it++)&#123;//遍历所有编号 
+        int fa=find(*it); 
+        m2[fa].push_back(*it);//每个编号入它根结点的map值 
+        s2.insert(fa);//记录根结点 
+    &#125; 
+    cout&lt;&lt;s2.size()&lt;&lt;endl;
+    vector&lt;ans&gt;v;//保存所有结果，方便排序 
+    for(map&lt;int,vector&lt;int&gt; &gt;::iterator it=m2.begin();it!=m2.end();it++)&#123; 
+        int z=it-&gt;second.size();
+        double sum1=0,sum2=0; 
+        for(int i=0;i&lt;z;i++)&#123; 
+            int t=it-&gt;second[i];
+            sum1+=m1[t].house;
+            sum2+=m1[t].area;
+        &#125; 
+        v.push_back(ans&#123;it-&gt;second[0],z,sum1/z,sum2/z&#125;);
+    &#125;    
+    sort(v.begin(),v.end(),cmp);
+    int z=v.size();
+    for(int i=0;i&lt;z;i++)&#123;
+        cout&lt;&lt;setw(4)&lt;&lt;setfill(&#39;0&#39;)&lt;&lt;v[i].id&lt;&lt;&quot; &quot;&lt;&lt;v[i].cn&lt;&lt;&quot; &quot;&lt;&lt;fixed&lt;&lt;setprecision(3)&lt;&lt;v[i].ave_house&lt;&lt;&quot; &quot;&lt;&lt;v[i].ave_area&lt;&lt;endl;
+    &#125;
+    return 0;
+&#125; 
+</code></pre>
+<h3 id="7-84-求分数序列前N项和-15分"><a href="#7-84-求分数序列前N项和-15分" class="headerlink" title="7-84 求分数序列前N项和 (15分)"></a>7-84 求分数序列前N项和 (15分)</h3><p>本题要求编写程序，计算序列 2/1+3/2+5/3+8/5+… 的前N项之和。注意该序列从第2项起，每一项的分子是前一项分子与分母的和，分母是前一项的分子。</p>
+<p>输入格式:<br>输入在一行中给出一个正整数N。</p>
+<p>输出格式:<br>在一行中输出部分和的值，精确到小数点后两位。题目保证计算结果不超过双精度范围。</p>
+<blockquote>
+<p>输入样例:<br>20<br>输出样例:</p>
+</blockquote>
+<blockquote>
+<p>32.66</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int fz(int n);
+int fm(int n);
+int fm(int n)&#123;
+    if(n==1)return 1;
+    else return fz(n-1);
+ 
+&#125;
+int fz(int n)&#123;
+    if(n==1)return 2;
+    else return fz(n-1)+fm(n-1);
+&#125;
+int main()&#123;
+    int n;
+    cin&gt;&gt;n;
+    double sum=0;
+    for(int j=n;j&gt;0;j--)
+    sum+=(double)fz(j)/(double)fm(j);
+    cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;sum;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/01/06 19:30:07<br>部分正确<br>12    7-84    C++ (g++)    5 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>0<br>答案正确<br>8    5 ms    380 KB<br>1<br>答案正确<br>2    5 ms    384 KB<br>2<br>答案正确<br>2    5 ms    512 KB<br>3<br>运行超时<br>0    –    0 KB</p>
+</blockquote>
+<p>7-85 顺序表元素删除 (30分)<br>已知长度为n的线性表A采用顺序存储结构，请写一个高效的算法，该算法删除线性表中所有值为item的数据元素。</p>
+<p>输入格式:<br>输入数据有三行</p>
+<p>第一行为整数n表示线性表的长度;(n&lt;=10^6)</p>
+<p>第二行：有n个整数,为线性表中的数据(整数数据为int型）</p>
+<p>第三行：待删除的数据item;</p>
+<p>输出格式:<br>输出数据有两行</p>
+<p>第一行 线性表中剩余数据个数；</p>
+<p>第二行 为线性表中的数据，要求相邻数据用空格分隔，最后一个数据之后没有空格。</p>
+<blockquote>
+<p>输入样例:<br>5<br>1 2 2 3 4<br>2<br>输出样例:<br>3<br>1 3 4</p>
+</blockquote>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int t[1000100];
+map&lt;int,int&gt;m;
+int main()&#123;
+    int n,M,cn=0,flag=0;
+    cin&gt;&gt;n;
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;t[i];
+        m[t[i]]++;
+    &#125;    
+    cin&gt;&gt;M;
+    cout&lt;&lt;n-m[M]&lt;&lt;endl;
+    for(int i=0;i&lt;n;i++)
+        if(t[i]!=M)&#123;
+        if(flag++)cout&lt;&lt;&quot; &quot;;
+        cout&lt;&lt;t[i];    
+        &#125;
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>提交时间    状态    分数    题目    编译器    耗时    用户<br>2020/02/06 16:43:29<br>部分正确<br>10    7-85    C++ (g++)    5 ms    2019113916<br>测试点    结果    分数    耗时    内存<br>1<br>运行超时<br>0    –    0 KB<br>2<br>答案正确<br>10    5 ms    424 KB<br>3<br>格式错误<br>0    4 ms    384 KB</p>
+</blockquote>
+</div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>simplek9</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://example.com/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/" title="蓝桥杯习题集">http://example.com/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></section></article><div class="post-nav"><div class="post-nav-item"></div><div class="post-nav-item"><a class="post-nav-next" href="/2021/05/21/hello-world/" rel="next" title="Hello World"><span class="post-nav-text">Hello World</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>如果您有任何关于博客内容的相关讨论，欢迎前往 <a href="https://github.com/YunYouJun/yunyoujun.github.io/discussions" target="_blank">GitHub Discussions</a> 与我交流。</span><br></div><div id="waline"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js", () => {
+  const walineConfig = {"enable":true,"serverURL":"https://waline.yunyoujun.cn","comment":true,"visitor":true,"avatarCDN":"https://cdn.v2ex.com/gravatar/","placeholder":"填写邮箱，可以收到回复通知哦～","requiredFields":["nick"],"el":"#waline","lang":"en"}
+  walineConfig.path = "/2021/05/22/%E8%93%9D%E6%A1%A5%E4%B9%A0%E9%A2%98%E9%9B%86/"
+  new Waline(walineConfig)
+}, window.Waline);</script></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2021 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> simplek9</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v5.4.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.6.1</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2021-05-22T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = " " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+}
+blog_live_time();
+</script></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div></body></html>
