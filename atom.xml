@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-27T07:16:50.084Z</updated>
+  <updated>2021-05-27T07:21:56.018Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/05/27/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
     <id>http://example.com/2021/05/27/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</id>
     <published>2021-05-27T06:53:48.000Z</published>
-    <updated>2021-05-27T07:16:50.084Z</updated>
+    <updated>2021-05-27T07:21:56.018Z</updated>
     
     <content type="html"><![CDATA[<pre><code>#include&lt;bits/stdc++.h&gt;using namespace std;const int maxv=1000;//最大顶点数 const int inf=0x3fffffff;int n,m,e[maxv][maxv];int d[maxv];//未访问顶点与树结点集合的最短距离 bool vis[maxv]=&#123;false&#125;;int prim()&#123;    fill(d,d+maxv,inf);//初始化数组d     d[1]=0;//默认零号为初始结点     int ans=0;//最小生成树边权之和     for(int i=1;i&lt;=n;i++)&#123;        int u=-1,min=inf;        for(int j=1;j&lt;=n;j++)&#123;//找到未访问节点中，最短距离的点             if(vis[j]==false&amp;&amp;d[j]&lt;min)&#123;                u=j;                min=d[j];            &#125;        &#125;        if(u==-1)return -1;//找不到路径，即不连通         vis[u]=true;        ans+=d[u];        for(int j=1;j&lt;=n;j++)&#123;//更新未访问结点到树结点集合的最短路径             if(vis[j]==false&amp;&amp;e[u][j]!=inf&amp;&amp;e[u][j]&lt;d[j])&#123;                d[j]=e[u][j];            &#125;        &#125;    &#125;    return ans;&#125;int main()&#123;    int u,v,w;//顶点数，边数，权值     scanf(&quot;%d%d&quot;,&amp;n,&amp;m);    fill(e[0],e[0]+maxv*maxv,inf);//初始化图e     for(int i=0;i&lt;m;i++)&#123;        scanf(&quot;%d%d%d&quot;,&amp;u,&amp;v,&amp;w);        e[u][v]=e[v][u]=w;    &#125;    int ans=prim();    printf(&quot;%d\n&quot;,ans);    return 0;&#125; </code></pre><blockquote><p>输入<br>6 10<br>1 2 6<br>1 3 1<br>1 4 5<br>2 3 5<br>2 5 3<br>3 4 5<br>3 6 4<br>3 5 6<br>4 6 2<br>5 6 6<br>输出<br>15</p></blockquote><p>从某一个顶点开始构建树，每次将距树最短路径（或代价最小）的新结点纳入树，直到所有顶点纳入为止 </p><p>适合稠密图 </p><p>prim算法与kruskal算法思想一致，区别在于：d[i]表示顶点i到集合S还是起点S </p>]]></content>
     
